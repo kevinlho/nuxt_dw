@@ -17,20 +17,21 @@ const toggleMobileMenu = () => {
 watch(mobileMenuOpen, (val) => {
   document.body.classList.toggle('overflow-hidden', val)
 })
+
 </script>
 
 <template>
   <!-- Main Header -->
   <header :class="[
-    'px-8 py-4 w-full transition-all z-50',
+    'px-4 py-4 w-full transition-all z-50',
     sticky ? 'fixed top-0 left-0 bg-white shadow-lg' : 'fixed bg-transparent'
   ]">
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center">
-        <img src="/assets/image/icon/selerakoe.png" alt="" class="w-20 h-20 mr-3" />
+        <img src="/assets/image/icon/ic_logo.png" alt="" class="w-20 h-20" />
         <span :class="['font-bold text-xl', sticky ? 'text-black' : 'text-white']">
-          Selerakoe
+          Designerworks
         </span>
       </div>
 
@@ -72,13 +73,15 @@ watch(mobileMenuOpen, (val) => {
   <!-- Mobile Menu -->
   <div
     v-if="mobileMenuOpen"
-    class="fixed inset-0 bg-white z-[9999] flex flex-col px-6 pt-4 pb-6 lg:hidden"
+    class="fixed inset-0 bg-white z-[9999] flex flex-col px-4 py-4 lg:hidden"
   >
-    <div class="flex items-center justify-between mb-6">
+    <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-2">
-        <img src="/assets/image/icon/ic_logo.png" alt="" class="w-9 h-9" />
-        <span class="font-bold text-xl text-black">Dr Isaac Deswanto</span>
+      <div class="flex items-center justify-between">
+        <img src="/assets/image/icon/ic_logo.png" alt="" class="w-20 h-20" />
+        <span :class="['font-bold text-xl', sticky ? 'text-black' : 'text-white']">
+          Designerworks
+        </span>
       </div>
 
       <button @click="toggleMobileMenu" class="p-2 rounded bg-gray-100 hover:bg-gray-200 lg:hidden">

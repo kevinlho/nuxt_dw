@@ -13,8 +13,8 @@ useHead({
   }
 })
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
+const title = 'Designerworks'
+const description = 'Your one step secured it solutions partner'
 
 useSeoMeta({
   title,
@@ -31,10 +31,9 @@ useSeoMeta({
   <UApp>
     <AppHeader/>
     <UMain>
-      <NuxtPage />
+      <div class="min-h-screen bg-blue-100">
+        <NuxtPage />
+      </div>
     </UMain>
-
-    <UFooter>
-    </UFooter>
   </UApp>
 </template>
