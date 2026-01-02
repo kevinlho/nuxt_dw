@@ -1,0 +1,37 @@
+<script setup lang="ts">
+const items = [
+  'https://picsum.photos/640/640?random=1',
+  'https://picsum.photos/640/640?random=2',
+  'https://picsum.photos/640/640?random=3',
+  'https://picsum.photos/640/640?random=4',
+  'https://picsum.photos/640/640?random=5',
+  'https://picsum.photos/640/640?random=6'
+]
+</script>
+
+<template>
+    <section class="w-full bg-white py-14">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Title -->
+            <p class="text-center text-2xl tracking-widest text-blue-500 font-semibold mb-10">
+                OUR PARTNERS
+            </p>
+
+            <UCarousel v-slot="{ item }" loop :autoplay="{ delay: 2000 }" wheel-gestures
+                :prev="{ variant: 'solid' }" :next="{ variant: 'solid' }" :items="items" :ui="{
+                    item: 'basis-1/5 ps-0',
+                    prev: 'sm:start-8',
+                    next: 'sm:end-8',
+                    container: 'ms-0'
+                }">
+                <div class="flex items-center justify-center h-full text-center">
+                    <img :src="item" width="150" height="150" class="object-contain" />
+                </div>
+            </UCarousel>
+        </div>
+    </section>
+</template>
+
+<style scoped>
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css";
+</style>

@@ -29,7 +29,15 @@ watch(mobileMenuOpen, (val) => {
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center">
-        <img src="/assets/image/icon/ic_logo.png" alt="" class="w-20 h-20" />
+        <NuxtImg
+          src="/image/icon/ic_logo.png"
+          alt="Designerworks Logo"
+          width="80"
+          height="80"
+          format="webp"
+          quality="90"
+          class="w-20 h-20"
+        />
         <span :class="['font-bold text-xl', sticky ? 'text-black' : 'text-white']">
           Designerworks
         </span>
@@ -78,7 +86,15 @@ watch(mobileMenuOpen, (val) => {
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center justify-between">
-        <img src="/assets/image/icon/ic_logo.png" alt="" class="w-20 h-20" />
+        <NuxtImg
+          src="/image/icon/ic_logo.png"
+          alt="Designerworks Logo"
+          width="80"
+          height="80"
+          format="webp"
+          quality="90"
+          class="w-20 h-20"
+        />
         <span :class="['font-bold text-xl', sticky ? 'text-black' : 'text-white']">
           Designerworks
         </span>

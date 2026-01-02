@@ -4,7 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxt/image',
   ],
 
   devtools: {
@@ -18,7 +19,11 @@ export default defineNuxtConfig({
       tailwindcss(),
     ]
   },
-  
+
+  image: {
+    provider: 'ipx'
+  },
+
   routeRules: {
     '/': { prerender: true }
   },

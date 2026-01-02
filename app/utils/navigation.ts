@@ -1,5 +1,6 @@
 export const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'Menu', to: '/menu' },
-  { label: 'Contact', to: '/contact' }
+  { label: 'ABOUT US', to: '/' },
+  { label: 'PARTNERS', to: '/' },
+  { label: 'SOLUTIONS & SERVICES', to: '/' },
+  { label: 'CONTACT US', to: '/' }
 ]

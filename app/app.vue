@@ -29,7 +29,6 @@ useSeoMeta({
 
 <template>
   <UApp>
-    <AppHeader/>
     <UMain>
       <div class="min-h-screen bg-blue-100">
         <NuxtPage />
