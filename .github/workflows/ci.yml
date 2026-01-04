@@ -1,6 +1,13 @@
-name: ci
+# .github/workflows/ci.yml
+name: CI
 
-on: push
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
 
 jobs:
   ci:
@@ -12,23 +19,20 @@ jobs:
         node: [22]
 
     steps:
-      - name: Checkout
+      - name: Checkout  
         uses: actions/checkout@v6
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
 
       - name: Install node
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
-          cache: pnpm
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
 
       - name: Lint
-        run: pnpm run lint
+        run: npm run lint
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: npm run typecheck
