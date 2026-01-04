@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/image',
+    '@vueuse/motion/nuxt'
   ],
 
   devtools: {
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { ssr: true }
   },
 
   compatibilityDate: '2025-01-15',

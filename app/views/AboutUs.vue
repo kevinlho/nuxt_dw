@@ -30,12 +30,7 @@
             solution in achieving the best results possible.
           </p>
 
-          <UButton
-            class="mt-8"
-            color="primary"
-            size="lg"
-            trailing-icon="i-heroicons-arrow-right"
-          >
+          <UButton class="mt-8" color="primary" size="lg" trailing-icon="i-heroicons-arrow-right">
             Read More
           </UButton>
         </div>
@@ -43,19 +38,13 @@
         <!-- RIGHT IMAGE -->
         <div class="relative">
           <div class="relative overflow-hidden rounded-2xl">
-            <img
-              src="/image/background/bg_landing.jpg"
-              alt="About Us"
-              class="w-full h-130 object-cover"
-            />
+            <img src="/image/background/bg_landing.jpg" alt="About Us" class="w-full h-130 object-cover" />
           </div>
 
           <!-- OVERLAY CARD -->
-          <div
-            class="absolute bottom-6 left-6 right-6 lg:right-auto lg:w-85
+          <div class="absolute bottom-6 left-6 right-6 lg:right-auto lg:w-85
                    rounded-2xl bg-linear-to-br from-[#020617] to-[#020617]/90
-                   p-8 text-white shadow-xl"
-          >
+                   p-8 text-white shadow-xl">
             <p class="text-lg">
               With a span of
               <span class="block text-4xl font-bold mt-2">22 years</span>
@@ -64,12 +53,27 @@
             </p>
 
             <!-- subtle circuit lines -->
-            <div
-              class="absolute inset-0 rounded-2xl opacity-20
+            <div class="absolute inset-0 rounded-2xl opacity-20
                      bg-[linear-gradient(90deg,rgba(59,130,246,.4)_1px,transparent_1px)]
-                     bg-size-[24px_24px]"
-            />
+                     bg-size-[24px_24px]" />
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 mt-32">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="flex flex-col items-center text-center rounded-2xl border border-gray-300 p-8 bg-amber-50">
+          <span class="text-black text-[64px]">100+<br /></span>
+          <span class="text-black text-[16px]">Countries</span>
+        </div>
+        <div class="flex flex-col items-center text-center rounded-2xl border border-gray-300 p-8 bg-blue-50">
+          <span class="text-black text-[64px]">20,000+<br /></span>
+          <span class="text-black text-[16px]">Users</span>
+        </div>
+        <div class="flex flex-col items-center text-center rounded-2xl border border-gray-300 p-8 bg-green-50">
+          <span class="text-black text-[64px]">24 × 7<br /></span>
+          <span class="text-black text-[16px]">Security Operation Center</span>
         </div>
       </div>
     </div>

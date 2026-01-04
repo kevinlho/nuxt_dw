@@ -1,34 +1,60 @@
 <script setup>
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { navItems } from '@/utils/navigation'
-import { redirectToInstagram, redirectToTikTok, redirectToWhatsapp, redirectToYouTube } from '~/utils/redirect'
-import { defineProps } from 'vue'
+import {
+  redirectToInstagram,
+  redirectToTikTok,
+  redirectToWhatsapp,
+  redirectToYouTube
+} from '~/utils/redirect'
 
-const props = defineProps({
-  sticky: Boolean
-})
-
+/* --------------------------
+   STATE
+-------------------------- */
 const mobileMenuOpen = ref(false)
+const isSticky = ref(false)
 
+/* --------------------------
+   METHODS
+-------------------------- */
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
 }
 
-// scroll lock on mobile menu
+const handleScroll = () => {
+  isSticky.value = window.scrollY > 80
+}
+
+/* --------------------------
+   EFFECTS
+-------------------------- */
 watch(mobileMenuOpen, (val) => {
   document.body.classList.toggle('overflow-hidden', val)
 })
 
+onMounted(() => {
+  handleScroll()
+  window.addEventListener('scroll', handleScroll, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <!-- Main Header -->
-  <header :class="[
-    'px-4 py-4 w-full transition-all z-50',
-    sticky ? 'fixed top-0 left-0 bg-white shadow-lg' : 'fixed bg-transparent'
-  ]">
-    <div class="flex items-center justify-between">
-      <!-- Logo -->
-      <div class="flex items-center">
+  <!-- HEADER -->
+  <header
+    :class="[
+      'w-full px-4 py-4 z-50 transition-all duration-300',
+      isSticky
+        ? 'fixed top-0 left-0 bg-white/95 backdrop-blur shadow-lg'
+        : 'absolute top-0 left-0 bg-transparent'
+    ]"
+  >
+    <div class="flex items-center justify-between max-w-7xl mx-auto">
+      <!-- LOGO -->
+      <div class="flex items-center gap-2">
         <NuxtImg
           src="/image/icon/ic_logo.png"
           alt="Designerworks Logo"
@@ -36,39 +62,49 @@ watch(mobileMenuOpen, (val) => {
           height="80"
           format="webp"
           quality="90"
-          class="w-20 h-20"
+          class="w-16 h-16"
         />
-        <span :class="['font-bold text-xl', sticky ? 'text-black' : 'text-white']">
+        <span
+          :class="[
+            'font-bold text-xl transition-colors',
+            isSticky ? 'text-black' : 'text-white'
+          ]"
+        >
           Designerworks
         </span>
       </div>
 
-      <!-- Desktop Navigation -->
-      <nav :class="[
-        'hidden lg:flex gap-6 text-sm font-semibold',
-        sticky ? 'text-black' : 'text-white'
-      ]">
+      <!-- DESKTOP NAV -->
+      <nav
+        :class="[
+          'hidden lg:flex gap-6 font-semibold transition-colors',
+          isSticky ? 'text-black' : 'text-white'
+        ]"
+      >
         <NuxtLink
           v-for="item in navItems"
           :key="item.label"
           :to="item.to"
-          class="hover:text-blue-500"
+          class="hover:text-blue-500 transition"
         >
-          <div class="text-xl sm:text-md">{{ item.label }}</div>
+          {{ item.label }}
         </NuxtLink>
       </nav>
 
-      <!-- CTA & Hamburger -->
+      <!-- CTA + MOBILE -->
       <div class="flex items-center gap-4">
         <button
           class="hidden lg:block bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-          @click="redirectToWhatsapp()"
+          @click="redirectToWhatsapp"
         >
           PESAN
         </button>
 
-        <button @click="toggleMobileMenu" class="p-2 rounded bg-gray-100 hover:bg-gray-200 lg:hidden">
-          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button
+          @click="toggleMobileMenu"
+          class="lg:hidden p-2 rounded bg-gray-100 hover:bg-gray-200 transition"
+        >
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <line x1="4" y1="6" x2="20" y2="6" />
             <line x1="4" y1="12" x2="20" y2="12" />
             <line x1="4" y1="18" x2="20" y2="18" />
@@ -78,14 +114,16 @@ watch(mobileMenuOpen, (val) => {
     </div>
   </header>
 
-  <!-- Mobile Menu -->
+  <!-- HEADER SPACER (prevents jump) -->
+  <div v-if="isSticky" class="h-[96px]" />
+
+  <!-- MOBILE MENU -->
   <div
     v-if="mobileMenuOpen"
-    class="fixed inset-0 bg-white z-[9999] flex flex-col px-4 py-4 lg:hidden"
+    class="fixed inset-0 z-[9999] bg-white flex flex-col px-4 py-4 lg:hidden"
   >
     <div class="flex items-center justify-between">
-      <!-- Logo -->
-      <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
         <NuxtImg
           src="/image/icon/ic_logo.png"
           alt="Designerworks Logo"
@@ -93,15 +131,18 @@ watch(mobileMenuOpen, (val) => {
           height="80"
           format="webp"
           quality="90"
-          class="w-20 h-20"
+          class="w-16 h-16"
         />
-        <span :class="['font-bold text-xl', sticky ? 'text-black' : 'text-white']">
+        <span class="font-bold text-xl text-black">
           Designerworks
         </span>
       </div>
 
-      <button @click="toggleMobileMenu" class="p-2 rounded bg-gray-100 hover:bg-gray-200 lg:hidden">
-        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <button
+        @click="toggleMobileMenu"
+        class="p-2 rounded bg-gray-100 hover:bg-gray-200"
+      >
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <line x1="4" y1="6" x2="20" y2="6" />
           <line x1="4" y1="12" x2="20" y2="12" />
           <line x1="4" y1="18" x2="20" y2="18" />
@@ -109,33 +150,31 @@ watch(mobileMenuOpen, (val) => {
       </button>
     </div>
 
-    <!-- Navigation links -->
-    <div class="flex flex-col space-y-4 text-sm font-semibold text-gray-800">
+    <!-- MOBILE NAV -->
+    <nav class="mt-8 flex flex-col gap-4 font-semibold text-gray-800">
       <NuxtLink
         v-for="item in navItems"
         :key="item.label"
         :to="item.to"
-        class="hover:text-blue-500"
         @click="mobileMenuOpen = false"
+        class="hover:text-blue-500 transition"
       >
         {{ item.label }}
       </NuxtLink>
-    </div>
+    </nav>
 
-    <!-- Social Links -->
-    <div class="pb-12 mt-auto">
+    <!-- SOCIAL -->
+    <div class="mt-auto pb-10">
       <p class="font-bold mb-2 text-black">Follow us</p>
       <div class="flex gap-3">
         <button @click="redirectToInstagram" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
-          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-instagram" />
         </button>
-
         <button @click="redirectToTikTok" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
-          <ion-icon name="logo-tiktok"></ion-icon>
+          <ion-icon name="logo-tiktok" />
         </button>
-
         <button @click="redirectToYouTube" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
-          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-icon name="logo-youtube" />
         </button>
       </div>
     </div>

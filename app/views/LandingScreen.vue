@@ -9,7 +9,6 @@
             <!-- Background Image -->
             <img src="/image/background/bg_landing02.jpg" class="absolute inset-0 w-full h-full object-cover" />
 
-
             <!-- CONTAINER -->
             <div class="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12">
                 <!-- ROW -->
@@ -27,10 +26,17 @@
                         </div>
 
                         <!-- ROW 2: CTA -->
+                        <div class="pb-5">
+                            <button
+                                class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full text-sm font-medium text-white w-[200px]">
+                                <span>IT Services</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
                         <div>
                             <button
-                                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full text-sm font-medium text-white">
-                                Our Services
+                                class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full text-sm font-medium text-white w-[200px]">
+                                Education
                                 <i class="bi bi-arrow-right"></i>
                             </button>
                         </div>
