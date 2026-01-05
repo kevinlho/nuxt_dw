@@ -4,13 +4,23 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
 </script>
 
 <template>
-  <footer class="bg-[#031B34] text-white px-4 py-12">
+  <footer class="bg-[#296aaf] text-white px-4 py-12">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-10">
       <!-- Logo + Social -->
       <div class="flex-1">
         <div class="flex items-center gap-2 mb-4">
-          <img src="/assets/image/icon/ic_logo.png" alt="" class="w-9 h-9" />
-          <h2 class="text-2xl font-bold">Dr. Isaac Deswanto</h2>
+          <NuxtImg
+            src="/image/icon/ic_logo.png"
+            alt="Designerworks Logo"
+            width="80"
+            height="80"
+            format="webp"
+            quality="90"
+            class="w-16 h-16"
+          />
+          <h2 class="text-2xl font-bold">
+            Designerworks
+          </h2>
         </div>
 
         <p class="text-sm text-gray-300 mb-6 max-w-sm">
@@ -19,16 +29,25 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
         </p>
 
         <div class="flex items-center gap-4">
-          <button @click="redirectToInstagram" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
-            <ion-icon name="logo-instagram"></ion-icon>
+          <button
+            class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+            @click="redirectToInstagram"
+          >
+            <ion-icon name="logo-instagram" />
           </button>
 
-          <button @click="redirectToTikTok" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
-            <ion-icon name="logo-tiktok"></ion-icon>
+          <button
+            class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+            @click="redirectToTikTok"
+          >
+            <ion-icon name="logo-tiktok" />
           </button>
 
-          <button @click="redirectToYouTube" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
-            <ion-icon name="logo-youtube"></ion-icon>
+          <button
+            class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+            @click="redirectToYouTube"
+          >
+            <ion-icon name="logo-youtube" />
           </button>
         </div>
       </div>
@@ -36,12 +55,80 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
       <!-- Navigation -->
       <div class="flex flex-col sm:flex-row gap-10">
         <div>
-          <h3 class="text-lg font-semibold border-b-2 border-blue-600 inline-block mb-4">Navigation</h3>
+          <h3 class="text-lg font-semibold border-b-2 border-blue-600 inline-block mb-4">
+            Navigation
+          </h3>
 
           <ul class="space-y-2 text-sm text-gray-300">
-            <li v-for="item in navItems" :key="item.label">
-              <NuxtLink :to="item.to" class="hover:text-blue-500">
+            <li
+              v-for="item in navItems"
+              :key="item.label"
+            >
+              <NuxtLink
+                :to="item.to"
+                class="hover:text-blue-500"
+              >
                 {{ item.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-col sm:flex-row gap-10">
+        <div>
+          <h3 class="text-lg font-semibold border-b-2 border-blue-600 inline-block mb-4">
+            IT Services
+          </h3>
+
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li
+              v-for="item in navItems"
+              :key="item.label"
+            >
+              <NuxtLink
+                :to="item.to"
+                class="hover:text-blue-500"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                class="hover:text-blue-500"
+              >
+                All Services
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-col sm:flex-row gap-10">
+        <div>
+          <h3 class="text-lg font-semibold border-b-2 border-blue-600 inline-block mb-4">
+            Education
+          </h3>
+
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li
+              v-for="item in navItems"
+              :key="item.label"
+            >
+              <NuxtLink
+                :to="item.to"
+                class="hover:text-blue-500"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                class="hover:text-blue-500"
+              >
+                All Services
               </NuxtLink>
             </li>
           </ul>
@@ -50,13 +137,16 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
     </div>
 
     <!-- Divider -->
-    <div class="border-t border-white/20 my-10"></div>
+    <div class="border-t border-white/20 my-10" />
 
     <!-- Bottom Section -->
     <div class="max-w-7xl mx-auto flex flex-col items-center gap-6 text-sm text-gray-400">
       <div class="text-center space-y-1">
         <p>
-          © <a href="#" class="text-blue-500 hover:underline">Dr. Isaac Deswanto</a> 2025.
+          © <a
+            href="#"
+            class="text-blue-500 hover:underline"
+          >Designerworks</a> 2026.
           All Rights Reserved.
         </p>
       </div>

@@ -1,6 +1,4 @@
 <script setup>
-import AppHeader from './components/header/AppHeader.vue';
-
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }

@@ -1,6 +1,22 @@
 export const navItems = [
-  { label: 'ABOUT US', to: '/' },
-  { label: 'PARTNERS', to: '/' },
-  { label: 'SOLUTIONS & SERVICES', to: '/' },
-  { label: 'CONTACT US', to: '/' }
+  {
+    label: 'ABOUT US',
+    to: '#section-aboutus'
+  },
+  {
+    label: 'PARTNERS',
+    to: '#section-partners'
+  },
+  {
+    label: 'IT SOLUTIONS',
+    to: '#section-itservices'
+  },
+  {
+    label: 'EDUCATION SERVICES',
+    to: '#section-educationservices'
+  },
+  {
+    label: 'CONTACT US',
+    to: '#section-contactus'
+  }
 ]

@@ -16,20 +16,20 @@ const props = defineProps({
 
 const displayValue = ref(0)
 
-if (process.client) {
+if (import.meta.client) {
   onMounted(() => {
     const startTime = Date.now()
     const animate = () => {
       const elapsed = Date.now() - startTime
       const progress = Math.min(elapsed / props.duration, 1)
-      
+
       displayValue.value = Math.round(props.to * progress)
-      
+
       if (progress < 1) {
         requestAnimationFrame(animate)
       }
     }
-    
+
     requestAnimationFrame(animate)
   })
 }

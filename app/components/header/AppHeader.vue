@@ -97,17 +97,38 @@ onBeforeUnmount(() => {
           class="hidden lg:block bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
           @click="redirectToWhatsapp"
         >
-          PESAN
+          Talk to us
         </button>
 
         <button
-          @click="toggleMobileMenu"
           class="lg:hidden p-2 rounded bg-gray-100 hover:bg-gray-200 transition"
+          @click="toggleMobileMenu"
         >
-          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-            <line x1="4" y1="18" x2="20" y2="18" />
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+            />
           </svg>
         </button>
       </div>
@@ -115,7 +136,10 @@ onBeforeUnmount(() => {
   </header>
 
   <!-- HEADER SPACER (prevents jump) -->
-  <div v-if="isSticky" class="h-[96px]" />
+  <div
+    v-if="isSticky"
+    class="h-[96px]"
+  />
 
   <!-- MOBILE MENU -->
   <div
@@ -139,13 +163,34 @@ onBeforeUnmount(() => {
       </div>
 
       <button
-        @click="toggleMobileMenu"
         class="p-2 rounded bg-gray-100 hover:bg-gray-200"
+        @click="toggleMobileMenu"
       >
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <line x1="4" y1="6" x2="20" y2="6" />
-          <line x1="4" y1="12" x2="20" y2="12" />
-          <line x1="4" y1="18" x2="20" y2="18" />
+        <svg
+          class="w-6 h-6 text-gray-700"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <line
+            x1="4"
+            y1="6"
+            x2="20"
+            y2="6"
+          />
+          <line
+            x1="4"
+            y1="12"
+            x2="20"
+            y2="12"
+          />
+          <line
+            x1="4"
+            y1="18"
+            x2="20"
+            y2="18"
+          />
         </svg>
       </button>
     </div>
@@ -156,8 +201,8 @@ onBeforeUnmount(() => {
         v-for="item in navItems"
         :key="item.label"
         :to="item.to"
-        @click="mobileMenuOpen = false"
         class="hover:text-blue-500 transition"
+        @click="mobileMenuOpen = false"
       >
         {{ item.label }}
       </NuxtLink>
@@ -165,15 +210,26 @@ onBeforeUnmount(() => {
 
     <!-- SOCIAL -->
     <div class="mt-auto pb-10">
-      <p class="font-bold mb-2 text-black">Follow us</p>
+      <p class="font-bold mb-2 text-black">
+        Follow us
+      </p>
       <div class="flex gap-3">
-        <button @click="redirectToInstagram" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
+        <button
+          class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+          @click="redirectToInstagram"
+        >
           <ion-icon name="logo-instagram" />
         </button>
-        <button @click="redirectToTikTok" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
+        <button
+          class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+          @click="redirectToTikTok"
+        >
           <ion-icon name="logo-tiktok" />
         </button>
-        <button @click="redirectToYouTube" class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md">
+        <button
+          class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+          @click="redirectToYouTube"
+        >
           <ion-icon name="logo-youtube" />
         </button>
       </div>
