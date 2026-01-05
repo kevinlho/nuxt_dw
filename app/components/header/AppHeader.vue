@@ -56,7 +56,7 @@ onBeforeUnmount(() => {
       <!-- LOGO -->
       <div class="flex items-center gap-2">
         <NuxtImg
-          src="/image/icon/ic_logo.png"
+          :src="isSticky ? '/image/icon/ic_logo_dark.webp' : '/image/icon/ic_logo_light.webp'"
           alt="Designerworks Logo"
           width="80"
           height="80"
@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2">
         <NuxtImg
-          src="/image/icon/ic_logo.png"
+          src="/image/icon/ic_logo_dark.webp"
           alt="Designerworks Logo"
           width="80"
           height="80"

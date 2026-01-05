@@ -38,7 +38,7 @@ const items = [
         :next="{ variant: 'solid' }"
         :items="items"
         :ui="{
-          item: 'basis-1/5 ps-0',
+          item: 'basis-1/3 sm:basis-1/4 lg:basis-1/5',
           prev: 'sm:start-8',
           next: 'sm:end-8',
           container: 'ms-0'

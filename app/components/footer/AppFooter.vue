@@ -5,7 +5,7 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
 
 <template>
   <footer class="bg-[#296aaf] text-white px-4 py-12">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
       <!-- Logo + Social -->
       <div class="flex-1">
         <div class="flex items-center gap-2 mb-4">
