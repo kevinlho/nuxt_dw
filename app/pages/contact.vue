@@ -10,15 +10,16 @@ import AppFooter from '~/components/footer/AppFooter.vue'
 
     <!-- HERO IMAGE (40vh = 40% of viewport height) -->
     <section
-class="relative w-full overflow-hidden"
-style="height: 40vh; min-height: 300px; max-height: 500px;">
+      class="relative w-full overflow-hidden"
+      style="height: 40vh; min-height: 300px; max-height: 500px;"
+    >
       <img
         src="/image/background/bg_landing02.jpg"
         alt="Hero"
         class="w-full h-full object-cover"
         style="display: block;"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
+      >
+      <div class="absolute inset-0 bg-black/50" />
       <div class="absolute inset-0 flex items-center justify-center z-10">
         <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide">
           Mobile Development
@@ -27,7 +28,10 @@ style="height: 40vh; min-height: 300px; max-height: 500px;">
     </section>
 
     <!-- CONTENT (60vh) -->
-    <section class="bg-white flex" style="min-height: 60vh;">
+    <section
+      class="bg-white flex"
+      style="min-height: 60vh;"
+    >
       <div class="max-w-5xl mx-auto px-6 py-16">
         <h2 class="text-2xl md:text-3xl font-normal text-center mb-12 text-gray-800 leading-relaxed">
           This is the content!

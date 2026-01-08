@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-15',
   // Ensure the build output directory is configured correctly
   nitro: {
-    preset: 'static'
+    preset: 'github-pages'
   },
 
   vite: {

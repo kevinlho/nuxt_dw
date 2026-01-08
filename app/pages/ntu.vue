@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
-import Accordion from '~/components/accordion/Accordion.vue';
+import Accordion from '~/components/accordion/Accordion.vue'
 
 const sections = [
   { id: 'overview', label: 'Overview' },
@@ -35,8 +35,11 @@ const handleNavClick = (sectionId: string, event: Event) => {
 
     <!-- HERO -->
     <section class="relative w-full h-[40vh] min-h-[300px] max-h-[500px] overflow-hidden">
-      <img src="/image/services/ntu/ntu.jpg" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-black/20"></div>
+      <img
+        src="/image/services/ntu/ntu.jpg"
+        class="w-full h-full object-cover"
+      >
+      <div class="absolute inset-0 bg-black/20" />
       <div class="absolute inset-0 flex items-center justify-center">
         <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
           NTU
@@ -48,11 +51,15 @@ const handleNavClick = (sectionId: string, event: Event) => {
     <section class="bg-white">
       <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
         <div class="flex flex-col lg:flex-row gap-12">
-
           <!-- LEFT NAV (DESKTOP ONLY) -->
           <nav class="hidden lg:block w-[280px] sticky top-[120px] self-start">
-            <a v-for="item in sections" :key="item.id" :href="`#${item.id}`" @click="handleNavClick(item.id, $event)"
-              class="block bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition">
+            <a
+              v-for="item in sections"
+              :key="item.id"
+              :href="`#${item.id}`"
+              class="block bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition"
+              @click="handleNavClick(item.id, $event)"
+            >
               {{ item.label }}
             </a>
           </nav>
@@ -63,7 +70,11 @@ const handleNavClick = (sectionId: string, event: Event) => {
               Ntu Global Immersion Competition
             </h1>
 
-            <Accordion id="overview" title="Overview" :default-open="false">
+            <Accordion
+              id="overview"
+              title="Overview"
+              :default-open="false"
+            >
               <p>
                 Step into the world of innovation at Nanyang Technological University (NTU), one of the world's top
                 young universities.
@@ -110,7 +121,11 @@ const handleNavClick = (sectionId: string, event: Event) => {
               </p>
             </Accordion>
 
-            <Accordion id="keybenefits" title="Key Benefits" :default-open="false">
+            <Accordion
+              id="keybenefits"
+              title="Key Benefits"
+              :default-open="false"
+            >
               <div class="text-gray-700">
                 <ul class="list-disc pl-6 space-y-3">
                   <li>Build a foundational introduction to artificial intelligence concepts.</li>
@@ -126,13 +141,18 @@ const handleNavClick = (sectionId: string, event: Event) => {
               </div>
             </Accordion>
 
-            <Accordion id="programme" title="Why this programme?" :default-open="false">
+            <Accordion
+              id="programme"
+              title="Why this programme?"
+              :default-open="false"
+            >
               <!-- Card Content -->
               <div class="text-gray-700">
                 <p>
                   Learn from an NTU professor in a supportive environment that sparks curiosity and creativity.
                   Discover AI's real-world impact and ignite your passion for future opportunities. Experience
-                  university life in vibrant Singapore, a global hub for technology, business, and innovation.</p>
+                  university life in vibrant Singapore, a global hub for technology, business, and innovation.
+                </p>
 
                 <p>Course Outline</p>
                 <ul class="list-disc pl-6 space-y-3">
@@ -253,7 +273,8 @@ const handleNavClick = (sectionId: string, event: Event) => {
                   <p>
                     This enhanced curriculum will motivate students to work closely with data, make data-driven
                     decisions, and explore cutting-edge applications in AI and data science. <Strong>Python will be the
-                      primary language for hands-on computational techniques.</Strong></p>
+                      primary language for hands-on computational techniques.</Strong>
+                  </p>
 
                   <h2><strong>Exciting Tours & Learning Journey</strong></h2>
                   <ul class="list-disc pl-6 space-y-3">
@@ -282,7 +303,11 @@ const handleNavClick = (sectionId: string, event: Event) => {
               </div>
             </Accordion>
 
-            <Accordion id="attend" title="Who should attend?" :default-open="false">
+            <Accordion
+              id="attend"
+              title="Who should attend?"
+              :default-open="false"
+            >
               <p>
                 High school students aged 16 and above, with a good command of English and an interest in artificial
                 intelligence, innovation, and technology. Ideal for curious learners eager to explore how AI connects to
@@ -291,7 +316,11 @@ const handleNavClick = (sectionId: string, event: Event) => {
               </p>
             </Accordion>
 
-            <Accordion id="fees" title="Fees and funding" :default-open="false">
+            <Accordion
+              id="fees"
+              title="Fees and funding"
+              :default-open="false"
+            >
               <p>
                 <strong>Remarks:</strong><br>
                 Programme fee includes 9% Goods and Services Tax.<br>
@@ -343,21 +372,31 @@ const handleNavClick = (sectionId: string, event: Event) => {
               </p>
             </Accordion>
 
-            <Accordion id="certification" title="Certification" :default-open="false">
+            <Accordion
+              id="certification"
+              title="Certification"
+              :default-open="false"
+            >
               <p>
                 An <strong>NTU Certificate of Completion</strong> will be awarded to participants who achieve at least
                 <strong>75%</strong> course attendance.
               </p>
             </Accordion>
 
-            <Accordion id="trainers" title="Faculty & industry trainers" :default-open="false">
+            <Accordion
+              id="trainers"
+              title="Faculty & industry trainers"
+              :default-open="false"
+            >
               <div class="border border-gray-200 rounded-2xl overflow-hidden bg-white">
                 <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6">
-
                   <!-- LEFT: Lecturer Image -->
                   <div class="shrink-0">
-                    <img src="/image/icon/ic_logo.png" alt="Assoc Prof Kwoh Chee Keong"
-                      class="w-24 h-24 rounded-full object-cover border border-gray-300" />
+                    <img
+                      src="/image/icon/ic_logo.png"
+                      alt="Assoc Prof Kwoh Chee Keong"
+                      class="w-24 h-24 rounded-full object-cover border border-gray-300"
+                    >
                   </div>
 
                   <!-- RIGHT: Lecturer Info (Vertically Centered) -->
@@ -371,10 +410,8 @@ const handleNavClick = (sectionId: string, event: Event) => {
                       College of Computing and Data Science
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </Accordion>
           </main>
         </div>
