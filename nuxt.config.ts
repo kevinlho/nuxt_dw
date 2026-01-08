@@ -32,6 +32,13 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    server: {
+      allowedHosts: ['.trycloudflare.com'],
+      hmr: {
+        protocol: 'wss',
+        clientPort: 443
+      }
+    },
     plugins: [
       tailwindcss()
     ]
