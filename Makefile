@@ -3,7 +3,7 @@
 # (npm version)
 # =========================
 
-.PHONY: dev install clean cacheclear reset info
+.PHONY: dev install clean cacheclear reset info cftunnel
 
 ## Start dev server
 dev:
@@ -46,3 +46,6 @@ info:
 	node -v
 	npm -v
 	npx nuxi info
+
+cftunnel:
+	cloudflared tunnel --url http://localhost:3000 

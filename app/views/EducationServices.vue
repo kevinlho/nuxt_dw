@@ -4,7 +4,8 @@ const services = [
     id: '001',
     title: 'NTU Global Competition',
     icon: '',
-    desc: 'A research-intensive public university, Nanyang Technological University, Singapore (NTU Singapore) has about 35,000 undergraduate and postgraduate students in the Business, Computing & Data Science, Engineering, Humanities, Arts, & Social Sciences, Medicine, Science, and Graduate colleges.'
+    desc: 'A research-intensive public university, Nanyang Technological University, Singapore (NTU Singapore) has about 35,000 undergraduate and postgraduate students in the Business, Computing & Data Science, Engineering, Humanities, Arts, & Social Sciences, Medicine, Science, and Graduate colleges.',
+    redirect: '/ntu'
   },
   {
     id: '002',
@@ -55,11 +56,11 @@ const services = [
               class="rounded-full border-2 border-black px-6 py-2 text-black font-semibold
                      hover:bg-black hover:text-white transition"
             >
-              Try now
+              Consult Now
             </button>
 
             <NuxtLink
-              to="#"
+              :to="service.redirect"
               class="text-blue-600 font-semibold hover:underline"
             >
               Learn more →
