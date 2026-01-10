@@ -2,9 +2,10 @@
 const services = [
   {
     id: '001',
-    title: 'Office Network',
+    title: 'Web and Mobile Application Development',
     icon: '',
-    desc: 'Setup, refresh and migration of Office IT equipments'
+    desc: 'Turn ideas into powerful digital experiences custom applications that drive real-world',
+    redirect: '/it/appdev'
   },
   {
     id: '002',
@@ -41,12 +42,6 @@ const services = [
     title: 'Enterprise Application',
     icon: '',
     desc: 'Ingress/Egress of Enterprise Applications'
-  },
-  {
-    id: '008',
-    title: 'Application Development',
-    icon: '',
-    desc: 'Mobile Application Development'
   }
 ]
 </script>
@@ -95,7 +90,7 @@ const services = [
             </button>
 
             <NuxtLink
-              to="#"
+              :to="service.redirect"
               class="text-blue-600 font-semibold hover:underline"
             >
               Learn more →
