@@ -3,6 +3,9 @@ import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
 import Accordion from '~/components/accordion/Accordion.vue'
 
+const apply_link = 'https://docs.google.com/forms/d/e/1FAIpQLSftNRfS32ZMR7VnOeyw6t4VGXo1x1Yjj4n9gk4bIiMmh1_w_w/viewform?usp=dialog'
+const brochure_link = 'https://drive.google.com/file/d/1qYxQdw4iR0eQBkmLbYr43sSBSa7vif8I/view?usp=drivesdk'
+
 const sections = [
   { id: 'overview', label: 'Overview' },
   { id: 'keybenefits', label: 'Key Benefits' },
@@ -49,6 +52,16 @@ const handleNavClick = (sectionId: string, event: Event) => {
         <div class="flex flex-col lg:flex-row gap-12">
           <!-- LEFT NAV (DESKTOP ONLY) -->
           <nav class="hidden lg:block w-[280px] sticky top-[120px] self-start">
+            <div class="flex flex-row">
+              <a
+                :href="apply_link"
+                class="flex-1 bg-green-200 hover:bg-green-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition text-center mr-2"
+              ><strong>Apply</strong></a>
+              <a
+                :href="brochure_link"
+                class="flex-1 bg-blue-200 hover:bg-blue-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition text-center ml-2"
+              >Brochure</a>
+            </div>
             <a
               v-for="item in sections"
               :key="item.id"
