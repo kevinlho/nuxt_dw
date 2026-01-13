@@ -12,36 +12,6 @@ const services = [
     title: 'Virtualization',
     icon: '',
     desc: 'Setup, refresh and migration on Virtualization platforms'
-  },
-  {
-    id: '003',
-    title: 'Storage',
-    icon: '',
-    desc: 'Setup, refresh and migration on Entreprise Storage'
-  },
-  {
-    id: '004',
-    title: 'Cloud',
-    icon: '',
-    desc: 'Setup, refresh and migration to cloud services'
-  },
-  {
-    id: '005',
-    title: 'Enterprise Application',
-    icon: '',
-    desc: 'Ingress/Egress of Enterprise Applications'
-  },
-  {
-    id: '006',
-    title: 'Application Development',
-    icon: '',
-    desc: 'Mobile Application Development'
-  },
-  {
-    id: '007',
-    title: 'Enterprise Application',
-    icon: '',
-    desc: 'Ingress/Egress of Enterprise Applications'
   }
 ]
 </script>
@@ -86,7 +56,7 @@ const services = [
               class="rounded-full border-2 border-black px-6 py-2 text-black font-semibold
                      hover:bg-black hover:text-white transition"
             >
-              Try now
+              Consult Now
             </button>
 
             <NuxtLink

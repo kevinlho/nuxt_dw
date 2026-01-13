@@ -216,7 +216,7 @@ const items = [
             </section>
 
             <section class="flex bg-gray-50">
-              <div class="flex flex-col max-w-7xl mx-auto py-12 md:py-16">
+              <div class="flex flex-col max-w-7xl mx-auto py-12 px-8 md:px-0 md:py-16">
                 <h3 class="text-4xl py-10 text-black text-center">
                   Government Support Eligible for EDG Grant
                 </h3>
@@ -293,57 +293,145 @@ const items = [
               <h3 class="text-4xl py-10 text-black text-center">
                 Our Projects
               </h3>
-              <section class="flex flex-row">
-                <!-- LEFT -->
-                <div class="flex-1">
-                  <section class="p-8 flex flex-col min-h-[250px]">
-                    <div class="flex items-center gap-3 mb-6">
-                      <h2 class="text-xl font-semibold text-gray-900">
-                        Automotive Lifestyle & Loyalty App<br>
-                        (for EV/Car Vendors)
-                      </h2>
-                    </div>
 
-                    <p class="text-gray-700 leading-relaxed flex-1">
+              <!-- ROW 1 -->
+              <section class="flex flex-col md:flex-row">
+                <!-- IMAGE (first on mobile) -->
+                <div class="order-1 md:order-2 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                  <NuxtImg
+                    src="/image/background/bg_landing.jpg"
+                    alt="Project image"
+                    fill
+                    class="object-cover"
+                  />
+                </div>
+
+                <!-- CONTENT -->
+                <div class="order-2 md:order-1 md:flex-1">
+                  <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                      Automotive Lifestyle & Loyalty App<br>
+                      (for EV/Car Vendors)
+                    </h2>
+
+                    <p class="text-gray-700 leading-relaxed">
                       We designed a digital ecosystem that extends the customer journey beyond the vehicle purchase.
                       With personalized content, tiered rewards, lifestyle perks, and service reminders, the app helps
                       car vendors build long-term brand loyalty and increase repeat engagement.
                     </p>
                   </section>
                 </div>
-
-                <!-- RIGHT -->
-                <div class="flex-2 p-8">
-                  <NuxtImg
-                    src="/image/background/bg_landing.jpg"
-                    alt="Project image"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
               </section>
 
-              <section class="flex flex-row">
-                <!-- LEFT -->
-                <div class="flex-2 p-8">
+              <!-- ROW 2 -->
+              <section class="flex flex-col md:flex-row my-12">
+                <!-- IMAGE (first on mobile) -->
+                <div class="order-1 md:order-1 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
                   <NuxtImg
                     src="/image/background/bg_landing.jpg"
                     alt="Project image"
-                    class="w-full h-full object-cover"
+                    fill
+                    class="object-cover"
                   />
                 </div>
 
-                <div class="flex-1">
-                  <section class="p-8 flex flex-col min-h-[250px]">
-                    <div class="flex items-center gap-3 mb-6">
-                      <h2 class="text-xl font-semibold text-gray-900">
-                        Broadband & eSIM Launch App <br>(for Telco)
-                      </h2>
-                    </div>
+                <!-- CONTENT -->
+                <div class="order-2 md:order-2 md:flex-1">
+                  <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                      Broadband &amp; eSIM Launch App<br>
+                      (for Telco)
+                    </h2>
 
-                    <p class="text-gray-700 leading-relaxed flex-1">
+                    <p class="text-gray-700 leading-relaxed">
                       We designed a digital ecosystem that extends the customer journey beyond the vehicle purchase.
                       With personalized content, tiered rewards, lifestyle perks, and service reminders, the app helps
                       car vendors build long-term brand loyalty and increase repeat engagement.
+                    </p>
+                  </section>
+                </div>
+              </section>
+
+              <!-- ROW 3 -->
+              <section class="flex flex-col md:flex-row">
+                <!-- IMAGE (first on mobile) -->
+                <div class="order-1 md:order-2 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                  <NuxtImg
+                    src="/image/background/bg_landing.jpg"
+                    alt="Project image"
+                    fill
+                    class="object-cover"
+                  />
+                </div>
+
+                <!-- CONTENT -->
+                <div class="order-2 md:order-1 md:flex-1">
+                  <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                      MindME: Dementia Cargiver Companion App
+                    </h2>
+
+                    <p class="text-gray-700 leading-relaxed">
+                      We created an intuitive mobile application to support caregivers of persons with dementia (PWD).
+                      The app delivers essential resources, daily tracking tools, and support prompts to reduce
+                      caregiver stress and improve care quality.
+                    </p>
+                  </section>
+                </div>
+              </section>
+
+              <!-- ROW 4 -->
+              <section class="flex flex-col md:flex-row my-12">
+                <!-- IMAGE (first on mobile) -->
+                <div class="order-1 md:order-1 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                  <NuxtImg
+                    src="/image/background/bg_landing.jpg"
+                    alt="Project image"
+                    fill
+                    class="object-cover"
+                  />
+                </div>
+
+                <!-- CONTENT -->
+                <div class="order-2 md:order-2 md:flex-1">
+                  <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                      IoT Waste Management Analytics Platform
+                    </h2>
+
+                    <p class="text-gray-700 leading-relaxed">
+                      We developed a smart waste tracking solution integrated with real-time GPS and IoT sensors on
+                      collection vehicles. The platform captures metrics like bin fullness, collection times, and route
+                      efficiency—helping government agencies optimize fleet operations, reduce fuel consumption, and
+                      improve environmental reporting.
+                    </p>
+                  </section>
+                </div>
+              </section>
+
+              <!-- ROW 5 -->
+              <section class="flex flex-col md:flex-row">
+                <!-- IMAGE (first on mobile) -->
+                <div class="order-1 md:order-2 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                  <NuxtImg
+                    src="/image/background/bg_landing.jpg"
+                    alt="Project image"
+                    fill
+                    class="object-cover"
+                  />
+                </div>
+
+                <!-- CONTENT -->
+                <div class="order-2 md:order-1 md:flex-1">
+                  <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                      Smart Food Waste Locker App
+                    </h2>
+
+                    <p class="text-gray-700 leading-relaxed">
+                      This application powers a smart locker system designed to encourage responsible food waste
+                      disposal. Users can scan, deposit, and track waste contributions, while backend systems generate
+                      insights for sustainability reporting.
                     </p>
                   </section>
                 </div>

@@ -54,7 +54,10 @@ onBeforeUnmount(() => {
   >
     <div class="flex items-center justify-between max-w-7xl mx-auto">
       <!-- LOGO -->
-      <div class="flex items-center gap-2">
+      <NuxtLink
+        to="/"
+        class="flex items-center gap-2"
+      >
         <NuxtImg
           :src="isSticky ? '/image/icon/ic_logo_dark.webp' : '/image/icon/ic_logo_light.webp'"
           alt="Designerworks Logo"
@@ -72,7 +75,7 @@ onBeforeUnmount(() => {
         >
           Designerworks
         </span>
-      </div>
+      </NuxtLink>
 
       <!-- DESKTOP NAV -->
       <nav

@@ -40,11 +40,7 @@ const handleNavClick = (sectionId: string, event: Event) => {
         class="w-full h-full object-cover"
       >
       <div class="absolute inset-0 bg-black/20" />
-      <div class="absolute inset-0 flex items-center justify-center">
-        <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
-          NTU
-        </h1>
-      </div>
+      <div class="absolute inset-0 flex items-center justify-center" />
     </section>
 
     <!-- CONTENT -->
@@ -67,7 +63,7 @@ const handleNavClick = (sectionId: string, event: Event) => {
           <!-- MAIN CONTENT -->
           <main class="flex-1">
             <h1 class="text-3xl md:text-4xl font-semibold mb-10 text-gray-900">
-              Ntu Global Immersion Competition
+              NTU Global Immersion Competition
             </h1>
 
             <Accordion
@@ -128,15 +124,40 @@ const handleNavClick = (sectionId: string, event: Event) => {
             >
               <div class="text-gray-700">
                 <ul class="list-disc pl-6 space-y-3">
-                  <li>Build a foundational introduction to artificial intelligence concepts.</li>
-                  <li>Explore how AI is applied across various industry sectors through real-world examples.</li>
-                  <li>Participate in guided activities designed to deepen understanding.</li>
-                  <li>Visit NTU's state-of-the-art research & lab facilities.</li>
-                  <li>Experience an industrial visit.</li>
-                  <li>Connect and collaborate with a diverse group of motivated peers.</li>
-                  <li>Discover insights into NTU's undergraduate programmes.</li>
-                  <li>Enjoy a memorable glimpse into life at a world-class university.</li>
-                  <li>Explore some of Singapore's iconic landmarks.</li>
+                  <h2 class="mb-3 text-2xl">
+                    <strong>Skill Development</strong>
+                  </h2>
+                  <li>Enhanced understanding of technology</li>
+                  <li>Practical experience through project work</li>
+                  <li>Improved presentation and teamwork skills</li>
+
+                  <h2 class="my-3 pt-3 text-2xl">
+                    <strong>Networking Opportunities</strong>
+                  </h2>
+                  <li>Interaction with industry leaders and guest speakers</li>
+                  <li>Building connections and collaboration with peers and professionals (internationally)</li>
+                  <li>Explore some of Singapore&apos;s iconic landmarks with peers</li>
+
+                  <h2 class="my-3 pt-3 text-2xl">
+                    <strong>Future Opportunities</strong>
+                  </h2>
+                  <li>Increased chances of university admissions</li>
+                  <li>Better preparation for future careers in tech and communication industries</li>
+                  <li>Discover insights into NTU&apos;s undergraduate programs and admission talks</li>
+
+                  <h2 class="my-3 pt-3 text-2xl">
+                    <strong>Academic Recognition</strong>
+                  </h2>
+                  <li>Recognition letter from NTU for ONE winning team</li>
+                  <li>Valuable addition to university applications and resumes</li>
+                  <li>Certificate of Completion from NTU</li>
+
+                  <h2 class="my-3 pt-3 text-2xl">
+                    <strong>Personal Growth</strong>
+                  </h2>
+                  <li>Boost in confidence and motivation</li>
+                  <li>Exposure to real-world challenges and solutions</li>
+                  <li>Experience an industrial visit</li>
                 </ul>
               </div>
             </Accordion>
@@ -154,152 +175,87 @@ const handleNavClick = (sectionId: string, event: Event) => {
                   university life in vibrant Singapore, a global hub for technology, business, and innovation.
                 </p>
 
-                <p>Course Outline</p>
-                <ul class="list-disc pl-6 space-y-3">
-                  <li>Introduction to AI and its Impact</li>
-                  <div>
-                    <p>
-                      Introduce students to AI, its basic concepts, and its potential impact on society.<br>
-                    </p>
-                    <ul class="list-none space-y-2">
-                      <li>- Welcome &amp; Overview: Brief on program goals and schedule.</li>
-                      <li>
-                        - Introductory Lecture on AI:
-                        Cover the basics of AI, including machine learning, deep learning, and data science.
-                        Explain terms and give real-world examples (e.g., recommendation engines, language
-                        processing).
-                      </li>
-                      <li>
-                        - Discussion on AI in Society:
-                        Explore AI's impact on various fields — medicine, entertainment, environmental science,
-                        education, self-learning, etc.
-                        Small groups discuss how they've seen AI in their daily lives.
-                      </li>
-                      <li>
-                        - Activity:
-                        Students interact with online AI demos (like Google's Teachable Machine) and share their
-                        experiences.
-                      </li>
-                    </ul>
-                  </div>
+                <p class="my-3 pt-3 text-2xl">
+                  <strong>Course Objective</strong>
+                </p>
+                <p>
+                  This course will introduce the fundamental theories and applications of Artificial Intelligence (AI).
+                  AI is widely considered as one of the most important technologies in recent years. Its impacts have
+                  been significant in many fields including business, manufacturing, education, healthcare,
+                  transportation, etc. This course will cover the recent developments in AI and introduce some important
+                  AI models and architectures including Convolutional Neural Networks (CNNs), Recurrent Neural Networks
+                  (RNNs), Long Short-Term Memory (LSTM), emerging trends such as Transformers, Diffusion Models and
+                  their relevant applications. At the end of the course, participants will have a good understanding of
+                  these important AI models, theories and their applications. If you are interested in the theories and
+                  applications of AI, you should take this course. This course will equip you with the key knowledge of
+                  AI for your future advancement in the relevant fields.
+                </p>
 
-                  <div>
-                    <li><strong>Data-Analytic Thinking</strong></li>
-                    <p class="my-3">
-                      Equip students with the essential skills in data handling and analysis, enabling them to
-                      effectively manage, explore, and present data for their AI projects.
-                    </p>
-                    <ul class="list-none space-y-2">
-                      <li>- Welcome &amp; Overview: Brief on program goals and schedule.</li>
-                      <li>
-                        - The Data Pipeline: Understanding types of data, data acquisition, and preparation.
-                      </li>
-                      <li>
-                        - Data Exploration: Basic concepts in statistics and exploratory data analysis (EDA) using case
-                        studies.
-                      </li>
-                      <li>
-                        - Data Presentation: Techniques for data visualisation and statistical analysis.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <li><strong>AI Technologies</strong></li>
-                    <p class="my-3">
-                      Understand Artificial Neural Networks (ANN) and Backpropagation, Multi-layer Perception, Deep
-                      Learning, and Various Architectures.
-                    </p>
-                    <ul class="list-none space-y-2">
-                      <li>
-                        - Lecture on Neural Networks: Introduction to ANN and backpropagation.
-                      </li>
-                      <li>
-                        - Deep Learning Architectures: Overview of CNN, RNN, and Transformer architectures.
-                      </li>
-                      <li>
-                        - Hands-On Activity: Implementing a simple neural network using TensorFlow.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <li><strong>Applications of AI in Different Fields</strong></li>
-                    <p class="my-3">
-                      Explore the applications of AI across various fields and inspire project ideas.
-                    </p>
-                    <ul class="list-none space-y-2">
-                      <li>
-                        - Lecture on AI Applications: Overview of how AI is used in fields like sports, finance,
-                        education and healthcare.
-                      </li>
-                      <li>
-                        - Field-Specific Breakout Sessions: Students choose one field of interest (e.g., entertainment,
-                        environment or healthcare) and join a mini-workshop on AI's role in that field.
-                      </li>
-                      <li>
-                        - Case Study Discussion: In groups, students discuss a notable AI application in their chosen
-                        field, exploring its development and impact.
-                      </li>
-                      <li>
-                        - Project Brainstorming: Students are guided through brainstorming for a small AI project.
-                        Teams form and settle on project ideas (e.g., a chatbot, simple prediction model).
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <li><strong>Project Development and Presentation</strong></li>
-
-                    <p class="my-3">
-                      Complete project work and showcase it to peers.
-                    </p>
-
-                    <ul class="list-none space-y-2">
-                      <li>
-                        - Project Work Session: Students work in teams to develop their projects. The instructor will
-                        offer guidance, helping students to troubleshoot and implement their ideas.
-                      </li>
-                      <li>
-                        - Student Presentations: Each team presents their project to the group, explaining the
-                        inspiration, process, and potential impact of their project.
-                      </li>
-                      <li>
-                        - Reflection and Closing Discussion: Students discuss their learning takeaways, challenges,
-                        and excitement about AI. The program concludes with awards or certificates.
-                      </li>
-                    </ul>
-                  </div>
-                  <p>
-                    This enhanced curriculum will motivate students to work closely with data, make data-driven
-                    decisions, and explore cutting-edge applications in AI and data science. <Strong>Python will be the
-                      primary language for hands-on computational techniques.</Strong>
-                  </p>
-
-                  <h2><strong>Exciting Tours & Learning Journey</strong></h2>
-                  <ul class="list-disc pl-6 space-y-3">
-                    <li>
-                      <strong>NTU Campus Tour</strong> - Explore NTU's vibrant campus with our student ambassadors and
-                      experience a glimpse of university life.
-                    </li>
-                    <li>
-                      <strong>Sharing by NTU Office of Admissions</strong> - A valuable opportunity to learn more about
-                      NTU's undergraduate programmes and admissions criteria.
-                    </li>
-                    <li>
-                      <strong>Innovation Learning Journey</strong> - Visit NTU's state-of-the-art research & lab
-                      facilities where ideas and research come to life through prototypes and early experimentation.
-                    </li>
-                    <li>
-                      <strong>Industrial Learning Journey</strong> - Gain insights into how technology is explored and
-                      applied in real-world settings through a visit to an industrial firm.
-                    </li>
-                    <li>
-                      <strong>Singapore City Highlights</strong> - Discover iconic locations such as Merlion Park,
-                      Esplanade and Singapore River. Enjoy a free-and-easy experience of the city's culture and charm.
-                    </li>
-                  </ul>
-                </ul>
+                <p class="my-3 pt-3 text-2xl">
+                  <strong>Course Outline</strong>
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Session 1</strong><br></span> Introduction to Artificial Intelligence
+                  (AI)
+                  History of AI, Deep Neural Network (DNN) architectures, linear classifier, AI resources
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Session 2</strong><br></span> Convolutional Neural Networks (CNNs)
+                  Theory of CNNs, CNN architecture, training of CNNs, well-known CNN models, applications such as image
+                  classification.
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Session 3</strong><br></span> Recurrent Neural Networks (RNNs)
+                  Theory of RNNs, RNN architecture, training of RNNs, theory of LSTMs, LSTM architecture, applications
+                  such as time-series prediction.
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Session 4</strong><br></span> Emerging Trends in AI
+                  Emerging trends in AI such as Transformer, Generative Adversarial Network, Diffusion Models, etc.
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Session 5</strong><br></span> Group Presentation by Participants
+                  (Competition Day)
+                  Teamwork and group presentation by participants
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Duration</strong><br></span>
+                  3-hour x 5 sessions = 15 hours
+                </p>
+                <p class="my-3">
+                  <span class="text-l"><strong>Teaching Methodology</strong><br></span>
+                  In class teaching or online teaching via Zoom / Teams
+                </p>
+                <p class="my-3 pt-3 text-2xl">
+                  <span class="text-l"><strong>Exciting Tours & Learning Journey</strong><br></span>
+                </p>
+                <p class="my-1">
+                  <strong>NTU Campus Tour</strong> - Explore NTU's vibrant campus and experience a glimpse of university
+                  life.
+                  Sharing by NTU Office of Admissions - A valuable opportunity to learn more about NTU's undergraduate
+                  programmes and admissions criteria.
+                </p>
+                <p class="my-1">
+                  <strong>Innovation Learning Journey</strong> - Visit NTU's state-of-the-art research & lab facilities
+                  where ideas and
+                  research come to life through prototypes and early experimentation.
+                </p>
+                <p class="my-1">
+                  <strong>Visit Other Universities</strong> - Explore other universities such as SMU, SUTD, PSB and
+                  Kaplan and many more
+                  for a workshop and admission talks
+                </p>
+                <p class="my-1">
+                  <strong>Industrial Learning Journey</strong> - Gain insights into how technology is explored and
+                  applied in real-world
+                  settings through a visit to an industrial firm.
+                </p>
+                <p class="my-1">
+                  <strong>Singapore Universal Studio</strong> - Explore and enjoy your last day with your peers at
+                  Southeast Asia's first
+                  Universal Studios theme park as your celebration and bonding time with your peers before leaving the
+                  country
+                </p>
               </div>
             </Accordion>
 
@@ -308,11 +264,23 @@ const handleNavClick = (sectionId: string, event: Event) => {
               title="Who should attend?"
               :default-open="false"
             >
+              <p class="my-3 pb-6 text-2xl">
+                Entry Requirements
+              </p>
               <p>
-                High school students aged 16 and above, with a good command of English and an interest in artificial
-                intelligence, innovation, and technology. Ideal for curious learners eager to explore how AI connects to
-                real-world challenges and future opportunities. To be eligible, applicants must be born on or before 31
-                December 2009.
+                <strong>Age</strong><br>Minimum of 15 years old
+              </p>
+              <p>
+                <strong>Academic Requirements</strong><br>A minimum average score of 75 in English and Mathematics based
+                on the most
+                recent academic transcript
+              </p>
+              <p>
+                <strong>Academic Background</strong><br>Applicants from all high school curriculum are welcome
+              </p>
+              <p>
+                *Applicants who do not fully meet the above entry requirements may still be considered on a case-by-case
+                basis, subject to an interview.
               </p>
             </Accordion>
 
@@ -323,32 +291,28 @@ const handleNavClick = (sectionId: string, event: Event) => {
             >
               <p>
                 <strong>Remarks:</strong><br>
-                Programme fee includes 9% Goods and Services Tax.<br>
-                This is a self-funded programme; thus, no funding or scholarship is available.<br>
-                Applicants will be notified latest by 6 November 2025 if the programme is confirmed to run.
+                This is a self-funded programme; thus, no funding or scholarship is available.
               </p>
               <p>
                 <strong>The programme fee is inclusive of:</strong><br>
               </p>
               <div class="text-gray-700">
                 <ul class="list-disc pl-6">
-                  <li>15 hours of tuition led by an NTU professor</li>
-                  <li>Welcome pack and NTU T-shirt</li>
-                  <li>Welcome buffet lunch</li>
-                  <li>Visit to NTU state-of-the art facilities</li>
-                  <li>Industrial visit</li>
-                  <li>Admissions talk by NTU Office of Admissions</li>
-                  <li>Campus tour and student sharing led by NTU student ambassadors</li>
-                  <li>Certificate of Completion (with minimum 75% attendance)</li>
-                  <li>Letter of Academic Performance (based on group presentation)</li>
+                  <li>Twin-sharing accommodation at a 4-star hotel</li>
+                  <li>Chartered bus between destinations</li>
+                  <li>Line-up of activities</li>
+                  <li>Catered meals (3 times a day)</li>
+                  <li>Experience the life of an NTU student</li>
+                  <li>Industry workshops and company visits</li>
+                  <li>NTU Letter of Commendation (Winning Team) &amp; Certificate of Completion (All Participants)</li>
+                  <li>Universal Studios Singapore trip &amp; buffet on the final day excursion</li>
                 </ul>
               </div>
               <p>
                 <strong>What are NOT included in the programme fee:</strong>
               </p>
               <p>
-                Your accommodation, transportation, own leisure activities, airfares, visas, travel insurance, food and
-                daily expenses are NOT included, unless otherwise stated.
+                Your own leisure activities, airfares, visas, & travel insurance.
               </p>
               <p>
                 <strong>Cancellation policy:</strong>
@@ -360,15 +324,13 @@ const handleNavClick = (sectionId: string, event: Event) => {
                 <strong>Payment mode:</strong>
               </p>
               <p>
-                Flywire (For more information:
-                https://www.ntu.edu.sg/life-at-ntu/student-life/onestop/payment-services/epayment-flywire )
+                Payment instruction will be shared with you separately.
               </p>
               <p>
                 <strong>Payment Deadline:</strong>
               </p>
               <p>
-                To be completed by the respective payment deadline as indicated on the website.
-                (Payment instruction will be shared with you separately)
+                To be completed by the respective payment deadline as indicated on the offer letter/email.
               </p>
             </Accordion>
 
@@ -377,10 +339,11 @@ const handleNavClick = (sectionId: string, event: Event) => {
               title="Certification"
               :default-open="false"
             >
-              <p>
-                An <strong>NTU Certificate of Completion</strong> will be awarded to participants who achieve at least
-                <strong>75%</strong> course attendance.
-              </p>
+              <ul class="list-disc pl-6">
+                <li>NTU Letter of Commendation (Winning Team) </li>
+                <li>Certificate of Completion (All Participants)</li>
+                <li>Certificate of Participation (Workshop at other Universities such as PSB and Kaplan)</li>
+              </ul>
             </Accordion>
 
             <Accordion
@@ -388,12 +351,12 @@ const handleNavClick = (sectionId: string, event: Event) => {
               title="Faculty & industry trainers"
               :default-open="false"
             >
-              <div class="border border-gray-200 rounded-2xl overflow-hidden bg-white">
+              <div class="border border-gray-200 rounded-2xl overflow-hidden bg-blue-50">
                 <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6">
                   <!-- LEFT: Lecturer Image -->
                   <div class="shrink-0">
                     <img
-                      src="/image/icon/ic_logo.png"
+                      src="/image/services/ntu/kim_yap_hui.jpg"
                       alt="Assoc Prof Kwoh Chee Keong"
                       class="w-24 h-24 rounded-full object-cover border border-gray-300"
                     >
@@ -402,12 +365,24 @@ const handleNavClick = (sectionId: string, event: Event) => {
                   <!-- RIGHT: Lecturer Info (Vertically Centered) -->
                   <div class="flex flex-col justify-center text-center sm:text-left space-y-2 h-full">
                     <h3 class="text-xl font-semibold text-gray-900">
-                      Assoc Prof Kwoh Chee Keong, PBM
+                      Dr. Kim-Hui Yap
                     </h3>
 
                     <p class="text-sm text-gray-600">
-                      PhD, DIC, MSc(ISE), Beng(EE), PGDIG, Sr.MIES, M.ICAAS, M.AMBIS<br>
-                      College of Computing and Data Science
+                      Dr. Kim-Hui Yap is a faculty member at Nanyang Technological University (NTU), Singapore, where he
+                      has served since 2002. He holds a Bachelor of Engineering (First Class Honours, University Medal
+                      Winner) and a Ph.D. from the University of Sydney, Australia. His research expertise includes
+                      artificial intelligence, computer vision, data, image and video processing, and pattern
+                      recognition.
+                      He has held numerous academic leadership and service roles at NTU, including NTU Senator,
+                      Assistant Chair (Faculty) of the School of Electrical and Electronic Engineering, Deputy Chairman
+                      of School Faculty Committee, and Program Director for the MSc (Signal Processing) programme. Dr.
+                      Yap has also contributed extensively to national and international professional organizations,
+                      editorial boards, and technical committees.
+                      An accomplished researcher, Dr. Yap has authored over 100 peer-reviewed publications, conference
+                      papers, and book chapters. He is also the author and editor of well-regarded books in image
+                      processing and computational intelligence, and has served as an Associate Editor and Editorial
+                      Board Member for several international journals.
                     </p>
                   </div>
                 </div>
