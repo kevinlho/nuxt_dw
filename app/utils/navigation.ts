@@ -17,6 +17,6 @@ export const navItems = [
   },
   {
     label: 'CONTACT US',
-    to: '#section-contactus'
+    to: '/contact'
   }
 ]
