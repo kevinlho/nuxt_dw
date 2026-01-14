@@ -9,9 +9,17 @@ const services = [
   },
   {
     id: '002',
-    title: 'Virtualization',
+    title: 'IT Infrastructure Solutions',
     icon: '',
-    desc: 'Setup, refresh and migration on Virtualization platforms'
+    desc: 'We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs.',
+    redirect: '/it/infra'
+  },
+  {
+    id: '002',
+    title: 'IT Security Services',
+    icon: '',
+    desc: 'Defending Your Business\'s Digital Assets. Our Priority, Your Peace of Mind.',
+    redirect: '/it/security'
   }
 ]
 </script>

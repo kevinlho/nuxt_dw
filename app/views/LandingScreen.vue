@@ -21,7 +21,7 @@
             <!-- ROW 1: HEADLINE -->
             <div class="mb-8">
               <h1 class="text-white text-3xl md:text-5xl font-semibold leading-tight">
-                Your 1-Step <br>
+                Your One-Stop <br>
                 Secured IT Solutions <br>
                 Partner
               </h1>
