@@ -127,7 +127,7 @@ const items = [
                   <p class="text-gray-700 leading-relaxed flex-1">
                     We start by understanding your business and user needs.
                   </p>
-                  <ul class="list-disc pl-6">
+                  <ul class="list-disc pl-6 text-black">
                     <li>Stakeholder workshops</li>
                     <li>Key staff interviews</li>
                     <li>Functional and technical recommendations</li>
@@ -142,7 +142,7 @@ const items = [
                   <p class="text-gray-700 leading-relaxed flex-1">
                     We shape the user journey with thoughtful, modern design.
                   </p>
-                  <ul class="list-disc pl-6 ">
+                  <ul class="list-disc pl-6 text-black">
                     <li>Information architecture</li>
                     <li>Design direction &amp; branding</li>
                     <li>UX/UI and interface wireframes</li>
@@ -158,7 +158,7 @@ const items = [
                   <p class="text-gray-700 leading-relaxed flex-1">
                     With the right tech stack, we build apps that are scalable and secure.
                   </p>
-                  <ul class="list-disc pl-6 ">
+                  <ul class="list-disc pl-6 text-black">
                     <li>Native or hybrid development</li>
                     <li>Dev environment setup</li>
                     <li>Agile development cycles</li>
@@ -174,7 +174,7 @@ const items = [
                   <p class="text-gray-700 leading-relaxed flex-1">
                     Before launch, we make sure everything works as it should.
                   </p>
-                  <ul class="list-disc pl-6 ">
+                  <ul class="list-disc pl-6 text-black">
                     <li>System integration testing</li>
                     <li>Security and penetration testing</li>
                     <li>User acceptance testing</li>
@@ -190,7 +190,7 @@ const items = [
                   <p class="text-gray-700 leading-relaxed flex-1">
                     We handle the technical handover and launch smoothly.
                   </p>
-                  <ul class="list-disc pl-6 ">
+                  <ul class="list-disc pl-6 text-black">
                     <li>Production environment setup</li>
                     <li>Content and data migration</li>
                     <li>App store submissions (iOS &amp; Android)</li>
@@ -206,7 +206,7 @@ const items = [
                   <p class="text-gray-700 leading-relaxed flex-1">
                     Post-launch, we’re still with you.
                   </p>
-                  <ul class="list-disc pl-6">
+                  <ul class="list-disc pl-6 text-black">
                     <li>Ongoing maintenance</li>
                     <li>Enhancement support</li>
                     <li>Bug fixes and updates</li>
@@ -228,7 +228,7 @@ const items = [
 
                 <p class="text-gray-800 leading-relaxed mb-10">
                   you may be eligible for up to
-                  <span class="text-4xl font-bold text-blue-500 align-middle mx-1">80%</span>
+                  <span class="text-4xl font-bold text-blue-500 align-middle mx-1">70%</span>
                   <span class="text-blue-500 font-semibold">
                     subsidy under the Enterprise Development Grant (EDG).
                   </span>
@@ -297,7 +297,7 @@ const items = [
               <!-- ROW 1 -->
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-2 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
                   <NuxtImg
                     src="/image/background/bg_landing.jpg"
                     alt="Project image"
@@ -307,7 +307,7 @@ const items = [
                 </div>
 
                 <!-- CONTENT -->
-                <div class="order-2 md:order-1 md:flex-1">
+                <div class="order-2 md:order-1 md:flex-4">
                   <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
                     <h2 class="text-xl font-semibold text-gray-900 mb-6">
                       Automotive Lifestyle & Loyalty App<br>
@@ -326,7 +326,7 @@ const items = [
               <!-- ROW 2 -->
               <section class="flex flex-col md:flex-row my-12">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-1 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-1 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
                   <NuxtImg
                     src="/image/background/bg_landing.jpg"
                     alt="Project image"
@@ -336,7 +336,7 @@ const items = [
                 </div>
 
                 <!-- CONTENT -->
-                <div class="order-2 md:order-2 md:flex-1">
+                <div class="order-2 md:order-2 md:flex-4">
                   <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
                     <h2 class="text-xl font-semibold text-gray-900 mb-6">
                       Broadband &amp; eSIM Launch App<br>
@@ -355,7 +355,7 @@ const items = [
               <!-- ROW 3 -->
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-2 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
                   <NuxtImg
                     src="/image/background/bg_landing.jpg"
                     alt="Project image"
@@ -365,7 +365,7 @@ const items = [
                 </div>
 
                 <!-- CONTENT -->
-                <div class="order-2 md:order-1 md:flex-1">
+                <div class="order-2 md:order-1 md:flex-4">
                   <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
                     <h2 class="text-xl font-semibold text-gray-900 mb-6">
                       MindME: Dementia Cargiver Companion App
@@ -383,7 +383,7 @@ const items = [
               <!-- ROW 4 -->
               <section class="flex flex-col md:flex-row my-12">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-1 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-1 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
                   <NuxtImg
                     src="/image/background/bg_landing.jpg"
                     alt="Project image"
@@ -393,7 +393,7 @@ const items = [
                 </div>
 
                 <!-- CONTENT -->
-                <div class="order-2 md:order-2 md:flex-1">
+                <div class="order-2 md:order-2 md:flex-4">
                   <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
                     <h2 class="text-xl font-semibold text-gray-900 mb-6">
                       IoT Waste Management Analytics Platform
@@ -412,7 +412,7 @@ const items = [
               <!-- ROW 5 -->
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-2 md:flex-2 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
                   <NuxtImg
                     src="/image/background/bg_landing.jpg"
                     alt="Project image"
@@ -422,7 +422,7 @@ const items = [
                 </div>
 
                 <!-- CONTENT -->
-                <div class="order-2 md:order-1 md:flex-1">
+                <div class="order-2 md:order-1 md:flex-4">
                   <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
                     <h2 class="text-xl font-semibold text-gray-900 mb-6">
                       Smart Food Waste Locker App
