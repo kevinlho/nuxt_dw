@@ -4,6 +4,10 @@
 
 <template>
   <section class="relative w-screen h-screen overflow-hidden">
+    <div
+      class="absolute inset-0 bg-black/25 z-10"
+    />
+
     <!-- FULL HEIGHT HERO WITH NuxtImg BACKGROUND -->
     <div class="relative w-full h-full flex items-center justify-center">
       <!-- Background Image -->
