@@ -1,27 +1,5 @@
 <script setup lang="ts">
-const services = [
-  {
-    id: '001',
-    title: 'Web and Mobile Application Development',
-    icon: '',
-    desc: 'Turn ideas into powerful digital experiences custom applications that drive real-world',
-    redirect: '/it/appdev'
-  },
-  {
-    id: '002',
-    title: 'IT Infrastructure Solutions',
-    icon: '',
-    desc: 'We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs.',
-    redirect: '/it/infra'
-  },
-  {
-    id: '002',
-    title: 'IT Security Services',
-    icon: '',
-    desc: 'Defending Your Business\'s Digital Assets. Our Priority, Your Peace of Mind.',
-    redirect: '/it/securityservices'
-  }
-]
+  import { itservices } from '~/utils/navigation'
 </script>
 
 <template>
@@ -40,7 +18,7 @@ const services = [
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          v-for="service in services"
+          v-for="service in itservices"
           :key="service.id"
           class="rounded-2xl border border-gray-300 p-8 flex flex-col"
         >

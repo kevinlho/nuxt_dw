@@ -1,5 +1,5 @@
 <script setup>
-import { navItems } from '~/utils/navigation'
+import { navItems, itservices, eduservices } from '~/utils/navigation'
 import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/utils/redirect'
 </script>
 
@@ -93,19 +93,14 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
 
           <ul class="space-y-2 text-sm text-gray-300">
             <li
-              v-for="item in navItems"
-              :key="item.label"
+              v-for="item in itservices"
+              :key="item.title"
             >
               <NuxtLink
-                :to="item.to"
+                :to="item.redirect"
                 class="hover:text-blue-500"
               >
-                {{ item.label }}
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink class="hover:text-blue-500">
-                All Services
+                {{ item.title }}
               </NuxtLink>
             </li>
           </ul>
@@ -121,19 +116,14 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
 
           <ul class="space-y-2 text-sm text-gray-300">
             <li
-              v-for="item in navItems"
-              :key="item.label"
+              v-for="item in eduservices"
+              :key="item.title"
             >
               <NuxtLink
-                :to="item.to"
+                :to="item.redirect"
                 class="hover:text-blue-500"
               >
-                {{ item.label }}
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink class="hover:text-blue-500">
-                All Services
+                {{ item.title }}
               </NuxtLink>
             </li>
           </ul>

@@ -1,13 +1,5 @@
 <script setup lang="ts">
-const services = [
-  {
-    id: '001',
-    title: 'NTU Global Competition',
-    icon: '',
-    desc: 'A research-intensive public university, Nanyang Technological University, Singapore (NTU Singapore) has about 35,000 undergraduate and postgraduate students in the Business, Computing & Data Science, Engineering, Humanities, Arts, & Social Sciences, Medicine, Science, and Graduate colleges.',
-    redirect: '/edu/ntu'
-  }
-]
+  import { eduservices } from '~/utils/navigation'
 </script>
 
 <template>
@@ -26,7 +18,7 @@ const services = [
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          v-for="service in services"
+          v-for="service in eduservices"
           :key="service.id"
           class="rounded-2xl border border-gray-300 p-8 flex flex-col"
         >
