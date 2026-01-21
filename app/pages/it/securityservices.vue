@@ -32,7 +32,7 @@ const features = [
 ]
 
 // helper: center last row if total % 3 === 2
-const cardClass = (index) => {
+const cardClass = (index: number) => {
   const total = features.length
   const isSecondLast = index === total - 2
   const needsCenter = total % 3 === 2

@@ -30,24 +30,33 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
 
         <div class="flex items-center gap-4">
           <button
-            class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+            class="group"
             @click="redirectToInstagram"
           >
-            <ion-icon name="logo-instagram" />
+            <Icon
+              name="simple-icons:instagram"
+              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
+            />
           </button>
 
           <button
-            class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+            class="group"
             @click="redirectToTikTok"
           >
-            <ion-icon name="logo-tiktok" />
+            <Icon
+              name="simple-icons:tiktok"
+              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
+            />
           </button>
 
           <button
-            class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+            class="group"
             @click="redirectToYouTube"
           >
-            <ion-icon name="logo-youtube" />
+            <Icon
+              name="simple-icons:youtube"
+              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
+            />
           </button>
         </div>
       </div>
@@ -95,9 +104,7 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink
-                class="hover:text-blue-500"
-              >
+              <NuxtLink class="hover:text-blue-500">
                 All Services
               </NuxtLink>
             </li>
@@ -125,9 +132,7 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink
-                class="hover:text-blue-500"
-              >
+              <NuxtLink class="hover:text-blue-500">
                 All Services
               </NuxtLink>
             </li>
