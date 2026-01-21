@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
+import Hero from '~/components/footer/Hero.vue'
 
 const items = [
   {
@@ -29,27 +30,11 @@ const items = [
 <template>
   <NuxtLayout>
     <AppHeader />
-
-    <!-- HERO (60%) -->
-    <section class="relative w-full h-[60vh] overflow-hidden">
-      <img
-        src="/image/background/bg_landing.jpg"
-        class="w-full h-full object-cover"
-      >
-      <div class="absolute inset-0 bg-black/20" />
-
-      <div class="absolute inset-0 flex items-center justify-center px-4">
-        <div class="flex flex-col gap-6 max-w-5xl w-full text-left">
-          <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
-            Web and Mobile Application Development
-          </h1>
-
-          <h5 class="text-base md:text-lg leading-snug text-gray-200 max-w-md">
-            TURN IDEAS INTO POWERFUL DIGITAL EXPERIENCES CUSTOM APPLICATIONS THAT DRIVE REAL-WORLD
-          </h5>
-        </div>
-      </div>
-    </section>
+    <Hero
+      :height-vh="60"
+      title="Web and Mobile Application Development"
+      subtitle="TURN IDEAS INTO POWERFUL DIGITAL EXPERIENCES CUSTOM APPLICATIONS THAT DRIVE REAL-WORLD"
+    />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -97,17 +82,25 @@ const items = [
               </div>
             </section>
 
-            <section class="flex flex-col items-center pt-10 pb-20 bg-[url('/image/background/bg_landing.jpg')]">
-              <h3 class="text-4xl py-10 text-white">
+            <section class="relative flex flex-col items-center pt-10 pb-20 overflow-hidden">
+              <!-- Background image -->
+              <div class="absolute inset-0 bg-[url('/image/background/bg_landing.jpg')] bg-cover bg-center" />
+
+              <!-- Dark overlay (background only) -->
+              <div class="absolute inset-0 bg-black/40" />
+
+              <!-- Content (NOT affected by overlay) -->
+              <h3 class="relative text-4xl py-10 text-white">
                 What We Build
               </h3>
-              <ul class="list-disc list-inside space-y-2 text-white">
+
+              <ul class="relative list-disc list-inside space-y-2 text-white">
                 <li>Mobile Application (iOS / Android)</li>
                 <li>Progressive Web Apps (PWA)</li>
                 <li>Interactive Experiences &amp; Virtual Environments</li>
                 <li>Gamified Platforms</li>
                 <li>Custom Dashboards &amp; Portals</li>
-                <li class="font-semibold text-white">
+                <li class="font-semibold">
                   All with modern UX/UI design at the core
                 </li>
               </ul>
@@ -297,12 +290,12 @@ const items = [
               <!-- ROW 1 -->
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-2 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
                   <NuxtImg
-                    src="/image/background/bg_landing.jpg"
+                    src="/image/appdev/appdev_01.jpg"
                     alt="Project image"
                     fill
-                    class="object-cover"
+                    class="object-cover absolute inset-0 w-full h-full"
                   />
                 </div>
 
@@ -326,12 +319,12 @@ const items = [
               <!-- ROW 2 -->
               <section class="flex flex-col md:flex-row my-12">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-1 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
                   <NuxtImg
-                    src="/image/background/bg_landing.jpg"
+                    src="/image/appdev/appdev_02.jpg"
                     alt="Project image"
                     fill
-                    class="object-cover"
+                    class="object-cover absolute inset-0 w-full h-full"
                   />
                 </div>
 
@@ -355,12 +348,12 @@ const items = [
               <!-- ROW 3 -->
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-2 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
                   <NuxtImg
-                    src="/image/background/bg_landing.jpg"
+                    src="/image/appdev/appdev_03.jpg"
                     alt="Project image"
                     fill
-                    class="object-cover"
+                    class="object-cover absolute inset-0 w-full h-full"
                   />
                 </div>
 
@@ -368,7 +361,7 @@ const items = [
                 <div class="order-2 md:order-1 md:flex-4">
                   <section class="p-6 md:p-8 flex flex-col min-h-[220px]">
                     <h2 class="text-xl font-semibold text-gray-900 mb-6">
-                      MindME: Dementia Cargiver Companion App
+                      MindME: Dementia Caregiver Companion App
                     </h2>
 
                     <p class="text-gray-700 leading-relaxed">
@@ -383,12 +376,12 @@ const items = [
               <!-- ROW 4 -->
               <section class="flex flex-col md:flex-row my-12">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-1 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
                   <NuxtImg
-                    src="/image/background/bg_landing.jpg"
+                    src="/image/appdev/appdev_04.jpg"
                     alt="Project image"
                     fill
-                    class="object-cover"
+                    class="object-cover absolute inset-0 w-full h-full"
                   />
                 </div>
 
@@ -412,12 +405,12 @@ const items = [
               <!-- ROW 5 -->
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
-                <div class="order-1 md:order-2 md:flex-6 relative min-h-[240px] md:min-h-[360px]">
+                <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
                   <NuxtImg
-                    src="/image/background/bg_landing.jpg"
+                    src="/image/appdev/appdev_05.jpg"
                     alt="Project image"
                     fill
-                    class="object-cover"
+                    class="object-cover absolute inset-0 w-full h-full"
                   />
                 </div>
 

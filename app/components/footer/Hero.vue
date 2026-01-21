@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   heightVh: {
     type: Number,
-    default: 60 // 60vh
+    default: 60
   },
   title: {
     type: String,
@@ -11,6 +11,14 @@ const props = defineProps({
   subtitle: {
     type: String,
     default: ''
+  },
+  image: {
+    type: String,
+    default: '/image/background/bg_landing.jpg'
+  },
+  overlay: {
+    type: Boolean,
+    default: true
   }
 })
 </script>
@@ -20,25 +28,31 @@ const props = defineProps({
     class="relative w-full overflow-hidden"
     :style="{ height: `${heightVh}vh` }"
   >
+    <!-- Background Image -->
     <img
-      src="/image/background/bg_landing.jpg"
+      :src="props.image"
       class="w-full h-full object-cover"
       alt="Hero background"
     >
 
-    <div class="absolute inset-0 bg-black/20" />
+    <!-- Overlay -->
+    <div
+      v-if="overlay"
+      class="absolute inset-0 bg-black/20 z-10"
+    />
 
-    <div class="absolute inset-0 flex items-center justify-center px-4">
+    <!-- Content -->
+    <div class="absolute inset-0 flex items-center justify-center px-4 z-20">
       <div class="flex flex-col gap-6 max-w-5xl w-full text-left">
         <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
-          {{ props.title }}
+          {{ title }}
         </h1>
 
         <h5
-          v-if="props.subtitle"
-          class="text-base md:text-lg leading-snug text-gray-200 max-w-md"
+          v-if="subtitle"
+          class="text-base md:text-lg leading-snug text-gray-200 max-w-md whitespace-pre-line"
         >
-          {{ props.subtitle }}
+          {{ subtitle }}
         </h5>
       </div>
     </div>

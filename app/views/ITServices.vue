@@ -19,7 +19,7 @@ const services = [
     title: 'IT Security Services',
     icon: '',
     desc: 'Defending Your Business\'s Digital Assets. Our Priority, Your Peace of Mind.',
-    redirect: '/it/security'
+    redirect: '/it/securityservices'
   }
 ]
 </script>

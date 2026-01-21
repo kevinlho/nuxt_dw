@@ -37,7 +37,7 @@ const handleNavClick = (sectionId: string, event: Event) => {
     <AppHeader />
 
     <!-- HERO -->
-    <section class="relative w-full h-[40vh] min-h-[300px] max-h-[500px] overflow-hidden">
+    <section class="relative w-full h-[60vh] min-h-[300px] max-h-[500px] overflow-hidden">
       <img
         src="/image/services/ntu/ntu.jpg"
         class="w-full h-full object-cover"
@@ -52,16 +52,6 @@ const handleNavClick = (sectionId: string, event: Event) => {
         <div class="flex flex-col lg:flex-row gap-12">
           <!-- LEFT NAV (DESKTOP ONLY) -->
           <nav class="hidden lg:block w-[280px] sticky top-[120px] self-start">
-            <div class="flex flex-row">
-              <a
-                :href="apply_link"
-                class="flex-1 bg-green-200 hover:bg-green-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition text-center mr-2"
-              ><strong>Apply</strong></a>
-              <a
-                :href="brochure_link"
-                class="flex-1 bg-blue-200 hover:bg-blue-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition text-center ml-2"
-              >Brochure</a>
-            </div>
             <a
               v-for="item in sections"
               :key="item.id"
@@ -71,13 +61,26 @@ const handleNavClick = (sectionId: string, event: Event) => {
             >
               {{ item.label }}
             </a>
+            <a
+              :href="brochure_link"
+              class="block bg-blue-200 hover:bg-blue-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition"
+            >Brochure</a>
           </nav>
 
           <!-- MAIN CONTENT -->
           <main class="flex-1">
-            <h1 class="text-3xl md:text-4xl font-semibold mb-10 text-gray-900">
-              NTU Global Immersion Competition
-            </h1>
+            <div class="flex flex-row justify-between items-center mb-10">
+              <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
+                NTU Global Immersion Competitionb
+              </h1>
+
+              <a
+                :href="apply_link"
+                class="bg-red-500 hover:bg-red-800 text-white text-sm px-4 py-4 rounded-md transition text-center"
+              >
+                <strong>APPLY NOW!</strong>
+              </a>
+            </div>
 
             <Accordion
               id="overview"
