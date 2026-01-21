@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { eduservices } from '~/utils/navigation'
+import { eduservices } from '~/utils/navigation'
 </script>
 
 <template>
