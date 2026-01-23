@@ -1,19 +1,19 @@
 export const navItems = [
   {
     label: 'ABOUT US',
-    to: '#section-aboutus'
+    to: '/#section-aboutus'
   },
   {
     label: 'PARTNERS',
-    to: '#section-partners'
+    to: '/#section-partners'
   },
   {
     label: 'IT SOLUTIONS',
-    to: '#section-itservices'
+    to: '/#section-itservices'
   },
   {
     label: 'EDUCATION SERVICES',
-    to: '#section-educationservices'
+    to: '/#section-educationservices'
   },
   {
     label: 'CONTACT US',

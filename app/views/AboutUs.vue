@@ -11,33 +11,16 @@
           </h2>
 
           <p class="mt-6 text-blue-600 font-semibold uppercase leading-relaxed">
-            Data Connect Technologies Pte Ltd is Singapore’s leading
-            information and communication technology provider.
+            Your Trusted One-Stop Technology Partner
           </p>
 
           <p class="mt-6 text-gray-600 leading-relaxed">
-            Our excellent services and full-fledged ICT solutions are relied
-            upon by organizations around the region, optimizing the efficiency
-            of their ICT operations, and freeing them to focus on their core
-            businesses.
+            We are an IT Services company delivering end-to-end technology solutions that help businesses innovate, secure, and scale with confidence. From application development to robust IT infrastructure and advanced cybersecurity services, we partner with organisations to build reliable, future-ready IT environments.
           </p>
 
           <p class="mt-4 text-gray-600 leading-relaxed">
-            Our growing clientele spans from companies in the financial
-            services, hospitality, manufacturing, logistic distribution,
-            maritime, telecommunications, to education and other industries.
-            We believe in joint assessments with our clients to derive a better
-            solution in achieving the best results possible.
+            Our approach combines technical expertise, industry best practices, and a deep understanding of business needs—ensuring technology works as a strategic enabler, not a barrier.
           </p>
-
-          <UButton
-            class="mt-8"
-            color="primary"
-            size="lg"
-            trailing-icon="i-heroicons-arrow-right"
-          >
-            Read More
-          </UButton>
         </div>
 
         <!-- RIGHT IMAGE -->
