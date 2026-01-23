@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
 import Hero from '~/components/Hero.vue'
@@ -11,10 +12,8 @@ const sections = [
 const handleNavClick = (sectionId: string, event: Event) => {
   event.preventDefault()
 
-  // Dispatch custom event to open the accordion
   window.dispatchEvent(new CustomEvent('open-accordion', { detail: sectionId }))
 
-  // Wait for accordion animation to start, then scroll
   setTimeout(() => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -22,11 +21,38 @@ const handleNavClick = (sectionId: string, event: Event) => {
     }
   }, 150)
 }
+
+// ===== EMAIL FORM STATE =====
+const form = ref({
+  name: '',
+  email: '',
+  company: '',
+  phone: '',
+  message: ''
+})
+
+const submitEmail = () => {
+  const to = 'contact@example.com' // 🔴 change this
+  const subject = encodeURIComponent('Contact Form Inquiry')
+
+  const body = encodeURIComponent(`
+Full Name: ${form.value.name}
+Email: ${form.value.email}
+Company: ${form.value.company}
+Phone: ${form.value.phone}
+
+Message:
+${form.value.message}
+  `)
+
+  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`
+}
 </script>
 
 <template>
   <NuxtLayout>
     <AppHeader />
+
     <Hero
       :height-vh="60"
       title="Contact Us"
@@ -35,7 +61,8 @@ const handleNavClick = (sectionId: string, event: Event) => {
     <section class="w-full bg-gray-50 px-4">
       <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
         <div class="flex flex-col lg:flex-row gap-12">
-          <!-- LEFT NAV (DESKTOP ONLY) -->
+
+          <!-- LEFT NAV -->
           <nav class="hidden lg:block w-[280px] sticky top-[120px] self-start">
             <a
               v-for="item in sections"
@@ -48,125 +75,108 @@ const handleNavClick = (sectionId: string, event: Event) => {
             </a>
           </nav>
 
+          <!-- MAIN CONTENT -->
           <main class="flex-1">
+
+            <!-- EMAIL -->
             <Accordion
               id="email"
               title="E-mail"
               :default-open="false"
             >
-              <!-- FORM -->
-              <div class="w-full">
-                <form class="space-y-5 sm:space-y-6 text-black">
-                  <!-- NAME + EMAIL -->
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                    <input
-                      type="text"
-                      placeholder="Full Name"
-                      class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
-                    >
-                    <input
-                      type="email"
-                      placeholder="Company Email"
-                      class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
-                    >
-                  </div>
+              <form
+                class="space-y-5 sm:space-y-6 text-black"
+                @submit.prevent="submitEmail"
+              >
+                <!-- NAME + EMAIL -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <input
+                    v-model="form.name"
+                    type="text"
+                    placeholder="Full Name"
+                    class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
+                    required
+                  >
+                  <input
+                    v-model="form.email"
+                    type="email"
+                    placeholder="Company Email"
+                    class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
+                    required
+                  >
+                </div>
 
-                  <!-- COMPANY + PHONE -->
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                    <input
-                      type="text"
-                      placeholder="Company Name"
-                      class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
-                    >
-                    <input
-                      type="tel"
-                      placeholder="Phone"
-                      class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
-                    >
-                  </div>
+                <!-- COMPANY + PHONE -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <input
+                    v-model="form.company"
+                    type="text"
+                    placeholder="Company Name"
+                    class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
+                  >
+                  <input
+                    v-model="form.phone"
+                    type="tel"
+                    placeholder="Phone"
+                    class="w-full px-4 sm:px-5 py-3 rounded-full border border-black outline-none"
+                  >
+                </div>
 
-                  <!-- MESSAGE -->
-                  <textarea
-                    rows="3"
-                    placeholder="Message"
-                    class="w-full px-4 sm:px-5 py-4 rounded-2xl border border-black outline-none resize-none"
-                  />
+                <!-- MESSAGE -->
+                <textarea
+                  v-model="form.message"
+                  rows="3"
+                  placeholder="Message"
+                  class="w-full px-4 sm:px-5 py-4 rounded-2xl border border-black outline-none resize-none"
+                  required
+                />
 
-                  <!-- SUBMIT -->
-                  <div class="flex justify-end pt-2">
-                    <button
-                      type="submit"
-                      class="flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full border border-black text-black hover:bg-black hover:text-white transition"
-                    >
-                      Submit
-                      <span>→</span>
-                    </button>
-                  </div>
-                </form>
-              </div>
+                <!-- SUBMIT -->
+                <div class="flex justify-end pt-2">
+                  <button
+                    type="submit"
+                    class="flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full
+                           border border-black text-black
+                           hover:bg-black hover:text-white transition"
+                  >
+                    Submit →
+                  </button>
+                </div>
+              </form>
             </Accordion>
+
+            <!-- WHATSAPP -->
             <Accordion
               id="whatsapp"
               title="Whatsapp"
               :default-open="false"
             >
-              <section class="border border-gray-200 rounded-2xl overflow-hidden bg-blue-50">
+              <section class="border border-gray-200 rounded-2xl bg-blue-50 mb-4">
                 <div class="flex flex-col sm:flex-row items-center gap-6 p-6">
-                  <!-- LEFT CONTENT -->
-                  <div class="flex-1 flex flex-row items-center">
+                  <div class="flex-1 flex items-center">
                     <img
                       src="/image/services/ntu/kim_yap_hui.jpg"
-                      alt="Assoc Prof Kwoh Chee Keong"
-                      class="w-24 h-24 rounded-full object-cover border border-gray-300"
+                      class="w-24 h-24 rounded-full object-cover border"
                     >
-                    <div class="flex flex-col justify-center space-y-2 pl-5">
-                      <h3 class="text-xl font-semibold text-gray-900">
-                        Mr. Designer Works
-                      </h3>
-                      <p class="text-sm text-gray-600">
-                        NTU Program Consultant
-                      </p>
+                    <div class="pl-5">
+                      <h3 class="text-xl font-semibold">Mr. Designer Works</h3>
+                      <p class="text-sm text-gray-600">NTU Program Consultant</p>
                     </div>
                   </div>
-                  <div class="flex items-center w-full sm:w-auto">
-                    <button
-                      class="w-full sm:w-auto rounded-full border-2 border-black px-6 py-2
-           text-black font-semibold hover:bg-black hover:text-white transition"
-                    >
-                      Consult Now
-                    </button>
-                  </div>
-                </div>
-              </section>
-              <section class="border border-gray-200 rounded-2xl overflow-hidden bg-blue-50">
-                <div class="flex flex-col sm:flex-row items-center gap-6 p-6">
-                  <!-- LEFT CONTENT -->
-                  <div class="flex-1 flex flex-row items-center">
-                    <img
-                      src="/image/services/ntu/kim_yap_hui.jpg"
-                      alt="Assoc Prof Kwoh Chee Keong"
-                      class="w-24 h-24 rounded-full object-cover border border-gray-300"
-                    >
-                    <div class="flex flex-col justify-center space-y-2 pl-5">
-                      <h3 class="text-xl font-semibold text-gray-900">
-                        Ms. Designer Works
-                      </h3>
-                      <p class="text-sm text-gray-600">
-                        IT Consultant
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center w-full sm:w-auto">
-                    <button
-                      class="w-full sm:w-auto rounded-full border-2 border-black px-6 py-2
-           text-black font-semibold hover:bg-black hover:text-white transition"
-                    >
-                      Consult Now
-                    </button>
-                  </div>
+
+                  <a
+                    href="https://wa.me/6281234567890"
+                    target="_blank"
+                    class="w-full sm:w-auto rounded-full border-2 border-black px-6 py-2
+                           font-semibold text-center
+                           hover:bg-black hover:text-white transition"
+                  >
+                    Consult Now
+                  </a>
                 </div>
               </section>
             </Accordion>
+
           </main>
         </div>
       </div>
