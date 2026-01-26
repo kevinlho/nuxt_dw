@@ -61,25 +61,90 @@ const handleNavClick = (sectionId: string, event: Event) => {
             >
               {{ item.label }}
             </a>
-            <a
-              :href="brochure_link"
-              class="block bg-blue-200 hover:bg-blue-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition"
-            >Brochure</a>
+            <div class="flex justify-center items-center">
+              <a
+                :href="brochure_link"
+                target="_blank"
+                class="flex items-center justify-between gap-2 bg-blue-200 hover:bg-blue-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition w-[280px] min-h-[96px]"
+              >
+                <!-- Text -->
+                <span class="text-xl font-semibold">Download <br> Brochure</span>
+
+                <!-- Icon (left) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="flex justify-center items-center">
+              <a
+                :href="apply_link"
+                class="flex items-center justify-center bg-red-500 hover:bg-red-800 text-white  text-sm px-4 py-4 mb-3 rounded-md transition w-[280px] h-[96px]"
+              >
+                <!-- Text -->
+                <span class="font-semibold text-xl">APPLY NOW!</span>
+              </a>
+            </div>
           </nav>
 
           <!-- MAIN CONTENT -->
           <main class="flex-1">
             <div class="flex flex-row justify-between items-center mb-10">
-              <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">
-                NTU Global Immersion Competitionb
-              </h1>
+              <div class="flex flex-col items-center">
+                <h1 class="text-3xl md:text-4xl text-center font-semibold text-gray-900">
+                  NTU Global Immersion Competition
+                </h1>
 
-              <a
-                :href="apply_link"
-                class="bg-red-500 hover:bg-red-800 text-white text-sm px-4 py-4 rounded-md transition text-center"
-              >
-                <strong>APPLY NOW!</strong>
-              </a>
+                <a
+                  :href="apply_link"
+                  class="flex items-center justify-center md:hidden
+                mt-10 w-full
+                h-[96px]
+         bg-red-500 hover:bg-red-800
+         text-white text-sm
+         px-4 py-4
+         rounded-md transition
+         text-center"
+                >
+                  <strong>APPLY NOW!</strong>
+                </a>
+
+                <a
+                  :href="brochure_link"
+                  target="_blank"
+                  class="flex items-center justify-center md:hidden mt-10 w-full min-h-[96px] gap-2 bg-blue-200 hover:bg-blue-500 text-gray-800 text-sm px-4 py-4 mb-3 rounded-md transition"
+                >
+                  <!-- Text -->
+                  <span class="text-xl font-semibold">Download Brochure</span>
+
+                  <!-- Icon (left) -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             <Accordion

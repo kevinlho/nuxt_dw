@@ -61,7 +61,6 @@ ${form.value.message}
     <section class="w-full bg-gray-50 px-4">
       <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
         <div class="flex flex-col lg:flex-row gap-12">
-
           <!-- LEFT NAV -->
           <nav class="hidden lg:block w-[280px] sticky top-[120px] self-start">
             <a
@@ -77,7 +76,6 @@ ${form.value.message}
 
           <!-- MAIN CONTENT -->
           <main class="flex-1">
-
             <!-- EMAIL -->
             <Accordion
               id="email"
@@ -159,8 +157,12 @@ ${form.value.message}
                       class="w-24 h-24 rounded-full object-cover border"
                     >
                     <div class="pl-5">
-                      <h3 class="text-xl font-semibold">Mr. Designer Works</h3>
-                      <p class="text-sm text-gray-600">NTU Program Consultant</p>
+                      <h3 class="text-xl font-semibold">
+                        Mr. Designer Works
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        NTU Program Consultant
+                      </p>
                     </div>
                   </div>
 
@@ -176,7 +178,6 @@ ${form.value.message}
                 </div>
               </section>
             </Accordion>
-
           </main>
         </div>
       </div>

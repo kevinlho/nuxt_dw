@@ -7,8 +7,11 @@ import Hero from '~/components/Hero.vue'
 <template>
   <NuxtLayout>
     <AppHeader />
-    <Hero :height-vh="60" title="IT Infrastructure Solutions"
-      subtitle="We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs." />
+    <Hero
+      :height-vh="60"
+      title="IT Infrastructure Solutions"
+      subtitle="We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs."
+    />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -25,8 +28,10 @@ import Hero from '~/components/Hero.vue'
                 From on-premises environments to public cloud platforms, we deliver end-to-end infrastructure solutions
                 with ongoing operational support.
               </p>
-              <button class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-                @click="redirectToWhatsapp">
+              <button
+                class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
+                @click="redirectToWhatsapp"
+              >
                 Talk to us
               </button>
             </section>
@@ -196,31 +201,54 @@ import Hero from '~/components/Hero.vue'
 
               <div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full">
                 <!-- Card 1 -->
-                <section class="rounded-2xl border border-gray-300 p-8
+                <section
+                  class="rounded-2xl border border-gray-300 p-8
              flex flex-col items-center justify-center text-center
-             min-h-55 w-full">
-                  <NuxtImg src="/image/icon/ic_entity.png" alt="Project image" width="64" height="64" class="mb-4" />
+             min-h-55 w-full"
+                >
+                  <NuxtImg
+                    src="/image/icon/ic_entity.png"
+                    alt="Project image"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  />
                   <p class="text-gray-700 leading-relaxed">
                     Single partner for design, implementation, and operations
                   </p>
                 </section>
 
                 <!-- Card 2 -->
-                <section class="rounded-2xl border border-gray-300 p-8
+                <section
+                  class="rounded-2xl border border-gray-300 p-8
              flex flex-col items-center justify-center text-center
-             min-h-55 w-full">
-                  <NuxtImg src="/image/icon/ic_list.png" alt="Project image" width="64" height="64" class="mb-4" />
+             min-h-55 w-full"
+                >
+                  <NuxtImg
+                    src="/image/icon/ic_list.png"
+                    alt="Project image"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  />
                   <p class="text-gray-700 leading-relaxed">
                     Vendor-neutral and best-practice driven
                   </p>
                 </section>
 
                 <!-- Card 3 -->
-                <section class="rounded-2xl border border-gray-300 p-8
+                <section
+                  class="rounded-2xl border border-gray-300 p-8
              flex flex-col items-center justify-center text-center
-             min-h-55 w-full">
-                  <NuxtImg src="/image/icon/ic_secure_lock.png" alt="Project image" width="64" height="64"
-                    class="mb-4" />
+             min-h-55 w-full"
+                >
+                  <NuxtImg
+                    src="/image/icon/ic_secure_lock.png"
+                    alt="Project image"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  />
                   <p class="text-gray-700 leading-relaxed">
                     Security-first infrastructure management
                   </p>
@@ -228,21 +256,35 @@ import Hero from '~/components/Hero.vue'
 
                 <!-- 👇 LAST ROW (CENTERED) -->
                 <div class="md:col-span-3 flex justify-center gap-8">
-                  <section class="rounded-2xl border border-gray-300 p-8
+                  <section
+                    class="rounded-2xl border border-gray-300 p-8
                flex flex-col items-center justify-center text-center
-               min-h-55 w-full max-w-sm">
-                    <NuxtImg src="/image/icon/ic_cost.png" alt="Project image" width="64" height="64" class="mb-4" />
+               min-h-55 w-full max-w-sm"
+                  >
+                    <NuxtImg
+                      src="/image/icon/ic_cost.png"
+                      alt="Project image"
+                      width="64"
+                      height="64"
+                      class="mb-4"
+                    />
                     <p class="text-gray-700 leading-relaxed">
                       Predictable monthly operating costs
                     </p>
                   </section>
 
-                  <section class="rounded-2xl border border-gray-300 p-8
+                  <section
+                    class="rounded-2xl border border-gray-300 p-8
                flex flex-col items-center justify-center text-center
-               min-h-55 w-full max-w-sm">
-                    <NuxtImg src="/image/icon/ic_expertise.png" alt="Project image" width="64" height="64"
+               min-h-55 w-full max-w-sm"
+                  >
+                    <NuxtImg
+                      src="/image/icon/ic_expertise.png"
+                      alt="Project image"
+                      width="64"
+                      height="64"
                       class="mb-4"
-/>
+                    />
                     <p class="text-gray-700 leading-relaxed">
                       Local expertise with enterprise-grade delivery
                     </p>
@@ -250,8 +292,11 @@ import Hero from '~/components/Hero.vue'
                 </div>
               </div>
               <div class="flex justify-center mt-12">
-                <button class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
-           hover:bg-lime-300 transition" @click="redirectToWhatsapp">
+                <button
+                  class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
+           hover:bg-lime-300 transition"
+                  @click="redirectToWhatsapp"
+                >
                   CONSULT NOW!
                 </button>
               </div>
