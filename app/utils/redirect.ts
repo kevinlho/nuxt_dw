@@ -1,21 +1,24 @@
 export const redirectToWhatsapp = () => {
-  const EMC_WA = '+62881080779977' // Ganti dengan nomor WhatsApp tujuan
-  const message = encodeURIComponent('Hello Designerworks, i need IT Services!')
-  const whatsappUrl = `https://wa.me/${EMC_WA}?text=${message}`
+  const details = {
+    number: '+6598716988',
+    template: encodeURIComponent('Hello Designerworks, i need IT Services!')
+  }
+
+  const whatsappUrl = `https://wa.me/${details.number}?text=${details.template}`
   window.open(whatsappUrl, '_blank')
 }
 
 export const redirectToInstagram = () => {
-  const instagramUrl = 'https://www.instagram.com/dr.isaacdeswanto'
+  const instagramUrl = 'https://www.instagram.com/'
   window.open(instagramUrl, '_blank')
 }
 
 export const redirectToTikTok = () => {
-  const tiktokUrl = 'https://www.tiktok.com/@dr.isaacdeswanto'
+  const tiktokUrl = 'https://www.tiktok.com/'
   window.open(tiktokUrl, '_blank')
 }
 
 export const redirectToYouTube = () => {
-  const youtubeUrl = 'https://www.youtube.com/@drisaacurologi'
+  const youtubeUrl = 'https://www.youtube.com/'
   window.open(youtubeUrl, '_blank')
 }

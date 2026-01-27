@@ -60,16 +60,16 @@
     <div class="container mx-auto px-4 mt-32">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="flex flex-col items-center text-center rounded-2xl border border-gray-300 p-8 bg-gray-50">
-          <span class="text-black text-[64px]">100+<br></span>
+          <span class="text-black text-[64px]">20+<br></span>
           <span class="text-black text-[16px]">Countries</span>
         </div>
         <div class="flex flex-col items-center text-center rounded-2xl border border-gray-300 p-8 bg-gray-50">
-          <span class="text-black text-[64px]">20,000+<br></span>
+          <span class="text-black text-[64px]">800+<br></span>
           <span class="text-black text-[16px]">Users</span>
         </div>
         <div class="flex flex-col items-center text-center rounded-2xl border border-gray-300 p-8 bg-gray-50">
           <span class="text-black text-[64px]">24 × 7<br></span>
-          <span class="text-black text-[16px]">Security Operation Center</span>
+          <span class="text-black text-[16px]">Customer Support</span>
         </div>
       </div>
     </div>

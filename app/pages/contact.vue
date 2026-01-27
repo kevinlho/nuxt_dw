@@ -32,8 +32,8 @@ const form = ref({
 })
 
 const submitEmail = () => {
-  const to = 'contact@example.com' // 🔴 change this
-  const subject = encodeURIComponent('Contact Form Inquiry')
+  const to = 'sales2@designerworks.com.sg'
+  const subject = encodeURIComponent('Form Inquiry')
 
   const body = encodeURIComponent(`
 Full Name: ${form.value.name}
