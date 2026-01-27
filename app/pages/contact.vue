@@ -47,6 +47,24 @@ ${form.value.message}
 
   window.location.href = `mailto:${to}?subject=${subject}&body=${body}`
 }
+
+const whatsappDetails = [
+  {
+    name: 'Designerworks',
+    title: 'IT Consultant',
+    phone: '+6598716988'
+  },
+  {
+    name: 'Ms. Tiffany',
+    title: 'Business Development Representative Indonesia',
+    phone: '+6285782787878'
+  },
+  {
+    name: 'Mr. Chin Kai',
+    title: 'Business Development Executive',
+    phone: '+6598716988'
+  }
+]
 </script>
 
 <template>
@@ -149,29 +167,33 @@ ${form.value.message}
               title="Whatsapp"
               :default-open="false"
             >
-              <section class="border border-gray-200 rounded-2xl bg-blue-50 mb-4">
+              <section
+                v-for="(item, index) in whatsappDetails"
+                :key="index"
+                class="border border-gray-200 rounded-2xl bg-blue-50 mb-4"
+              >
                 <div class="flex flex-col sm:flex-row items-center gap-6 p-6">
                   <div class="flex-1 flex items-center">
                     <img
-                      src="/image/services/ntu/kim_yap_hui.jpg"
+                      src="/image/icon/ic_logo.png"
                       class="w-24 h-24 rounded-full object-cover border"
                     >
                     <div class="pl-5">
                       <h3 class="text-xl font-semibold">
-                        Mr. Designer Works
+                        {{ item.name }}
                       </h3>
                       <p class="text-sm text-gray-600">
-                        NTU Program Consultant
+                        {{ item.title }}
                       </p>
                     </div>
                   </div>
 
                   <a
-                    href="https://wa.me/6281234567890"
+                    :href="`https://wa.me/${item.phone.replace('+', '')}`"
                     target="_blank"
                     class="w-full sm:w-auto rounded-full border-2 border-black px-6 py-2
-                           font-semibold text-center
-                           hover:bg-black hover:text-white transition"
+               font-semibold text-center
+               hover:bg-black hover:text-white transition"
                   >
                     Consult Now
                   </a>
