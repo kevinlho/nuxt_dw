@@ -24,8 +24,7 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
         </div>
 
         <p class="text-sm text-gray-300 mb-6 max-w-sm">
-          It is a long established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout.
+          Your Trusted One-Stop Technology Partner
         </p>
 
         <div class="flex items-center gap-4">

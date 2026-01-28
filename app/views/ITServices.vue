@@ -41,6 +41,7 @@ import { itservices } from '~/utils/navigation'
             <button
               class="rounded-full border-2 border-black px-6 py-2 text-black font-semibold
                      hover:bg-black hover:text-white transition"
+              @click="redirectToWhatsappIt"
             >
               Consult Now
             </button>

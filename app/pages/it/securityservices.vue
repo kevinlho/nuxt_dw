@@ -114,7 +114,7 @@ const cardClass = (index: number) => {
 
             <section class="flex flex-col max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 items-center">
               <h3 class="text-4xl mb-10 text-black text-center">
-                Our Features
+                Our Services
               </h3>
 
               <div class="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-7xl w-full">

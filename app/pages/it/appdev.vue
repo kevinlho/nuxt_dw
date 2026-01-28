@@ -50,7 +50,7 @@ const items = [
 
               <button
                 class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-                @click="redirectToWhatsapp"
+                @click="redirectToWhatsappIt"
               >
                 Talk to us
               </button>

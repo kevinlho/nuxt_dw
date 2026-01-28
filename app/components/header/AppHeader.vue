@@ -4,7 +4,7 @@ import { navItems } from '@/utils/navigation'
 import {
   redirectToInstagram,
   redirectToTikTok,
-  redirectToWhatsapp,
+  redirectToWhatsappIt,
   redirectToYouTube
 } from '~/utils/redirect'
 
@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
       <div class="flex items-center gap-4">
         <button
           class="hidden lg:block bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-          @click="redirectToWhatsapp"
+          @click="redirectToWhatsappIt"
         >
           Talk to us
         </button>

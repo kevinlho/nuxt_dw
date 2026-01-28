@@ -30,7 +30,7 @@ import Hero from '~/components/Hero.vue'
               </p>
               <button
                 class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-                @click="redirectToWhatsapp"
+                @click="redirectToWhatsappIt"
               >
                 Talk to us
               </button>
@@ -38,7 +38,7 @@ import Hero from '~/components/Hero.vue'
 
             <section class="flex flex-col max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 items-center">
               <h3 class="text-4xl py-10 text-black text-center">
-                Our Features
+                Our Services
               </h3>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl w-full">
@@ -181,8 +181,7 @@ import Hero from '~/components/Hero.vue'
               </h3>
 
               <p class="relative mb-3 text-center text-white max-w-3xl">
-                We design and build mobile apps, web platforms, and interactive experiences that help you acquire new
-                business, improve internal efficiency, and keep your customers coming back.
+                We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs.
               </p>
 
               <ul class="relative list-disc list-inside space-y-2 text-white">
@@ -295,7 +294,7 @@ import Hero from '~/components/Hero.vue'
                 <button
                   class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
            hover:bg-lime-300 transition"
-                  @click="redirectToWhatsapp"
+                  @click="redirectToWhatsappIt"
                 >
                   CONSULT NOW!
                 </button>

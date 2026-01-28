@@ -21,6 +21,10 @@
           <p class="mt-4 text-gray-600 leading-relaxed">
             Our approach combines technical expertise, industry best practices, and a deep understanding of business needs—ensuring technology works as a strategic enabler, not a barrier.
           </p>
+
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            At the same time, through Designerworks, our Singapore-based educational travel arm, we extend our expertise into the education sector by delivering cutting-edge study tour programs focused on emerging IT and technology fields. We design immersive, future-ready learning experiences for students, integrating hands-on exposure to artificial intelligence, coding, robotics, and data science with cultural exploration and academic enrichment.
+          </p>
         </div>
 
         <!-- RIGHT IMAGE -->
@@ -41,9 +45,9 @@
           >
             <p class="text-lg">
               With a span of
-              <span class="block text-4xl font-bold mt-2">22 years</span>
+              <span class="block text-4xl font-bold mt-2">over 10 years</span>
               in the business since
-              <span class="font-bold">year 2003</span>
+              <span class="font-bold">year 2015</span>
             </p>
 
             <!-- subtle circuit lines -->

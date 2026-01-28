@@ -25,8 +25,8 @@
             <!-- ROW 1: HEADLINE -->
             <div class="mb-8">
               <h1 class="text-white text-3xl md:text-5xl font-semibold leading-tight">
-                Your One-Stop <br>
-                Secured IT Solutions <br>
+                Your Trusted <br>
+                One-Stop Technology <br>
                 Partner
               </h1>
             </div>
