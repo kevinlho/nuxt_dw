@@ -181,7 +181,8 @@ import Hero from '~/components/Hero.vue'
               </h3>
 
               <p class="relative mb-3 text-center text-white max-w-3xl">
-                We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs.
+                We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your
+                business needs.
               </p>
 
               <ul class="relative list-disc list-inside space-y-2 text-white">
@@ -198,16 +199,17 @@ import Hero from '~/components/Hero.vue'
                 Why Us?
               </h3>
 
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full">
+              <div class="flex flex-wrap justify-center gap-6 w-full">
                 <!-- Card 1 -->
                 <section
-                  class="rounded-2xl border border-gray-300 p-8
-             flex flex-col items-center justify-center text-center
-             min-h-55 w-full"
+                  class="w-full sm:w-[48%] lg:w-[30%]
+           rounded-2xl border border-gray-300
+           p-6 lg:p-8
+           flex flex-col items-center justify-center text-center
+           min-h-[220px]"
                 >
                   <NuxtImg
                     src="/image/icon/ic_entity.png"
-                    alt="Project image"
                     width="64"
                     height="64"
                     class="mb-4"
@@ -219,13 +221,14 @@ import Hero from '~/components/Hero.vue'
 
                 <!-- Card 2 -->
                 <section
-                  class="rounded-2xl border border-gray-300 p-8
-             flex flex-col items-center justify-center text-center
-             min-h-55 w-full"
+                  class="w-full sm:w-[48%] lg:w-[30%]
+           rounded-2xl border border-gray-300
+           p-6 lg:p-8
+           flex flex-col items-center justify-center text-center
+           min-h-[220px]"
                 >
                   <NuxtImg
                     src="/image/icon/ic_list.png"
-                    alt="Project image"
                     width="64"
                     height="64"
                     class="mb-4"
@@ -237,13 +240,14 @@ import Hero from '~/components/Hero.vue'
 
                 <!-- Card 3 -->
                 <section
-                  class="rounded-2xl border border-gray-300 p-8
-             flex flex-col items-center justify-center text-center
-             min-h-55 w-full"
+                  class="w-full sm:w-[48%] lg:w-[30%]
+           rounded-2xl border border-gray-300
+           p-6 lg:p-8
+           flex flex-col items-center justify-center text-center
+           min-h-[220px]"
                 >
                   <NuxtImg
                     src="/image/icon/ic_secure_lock.png"
-                    alt="Project image"
                     width="64"
                     height="64"
                     class="mb-4"
@@ -253,43 +257,45 @@ import Hero from '~/components/Hero.vue'
                   </p>
                 </section>
 
-                <!-- 👇 LAST ROW (CENTERED) -->
-                <div class="md:col-span-3 flex justify-center gap-8">
-                  <section
-                    class="rounded-2xl border border-gray-300 p-8
-               flex flex-col items-center justify-center text-center
-               min-h-55 w-full max-w-sm"
-                  >
-                    <NuxtImg
-                      src="/image/icon/ic_cost.png"
-                      alt="Project image"
-                      width="64"
-                      height="64"
-                      class="mb-4"
-                    />
-                    <p class="text-gray-700 leading-relaxed">
-                      Predictable monthly operating costs
-                    </p>
-                  </section>
+                <!-- Card 4 -->
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
+           rounded-2xl border border-gray-300
+           p-6 lg:p-8
+           flex flex-col items-center justify-center text-center
+           min-h-[220px]"
+                >
+                  <NuxtImg
+                    src="/image/icon/ic_cost.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  />
+                  <p class="text-gray-700 leading-relaxed">
+                    Predictable monthly operating costs
+                  </p>
+                </section>
 
-                  <section
-                    class="rounded-2xl border border-gray-300 p-8
-               flex flex-col items-center justify-center text-center
-               min-h-55 w-full max-w-sm"
-                  >
-                    <NuxtImg
-                      src="/image/icon/ic_expertise.png"
-                      alt="Project image"
-                      width="64"
-                      height="64"
-                      class="mb-4"
-                    />
-                    <p class="text-gray-700 leading-relaxed">
-                      Local expertise with enterprise-grade delivery
-                    </p>
-                  </section>
-                </div>
+                <!-- Card 5 -->
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
+           rounded-2xl border border-gray-300
+           p-6 lg:p-8
+           flex flex-col items-center justify-center text-center
+           min-h-[220px]"
+                >
+                  <NuxtImg
+                    src="/image/icon/ic_expertise.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  />
+                  <p class="text-gray-700 leading-relaxed">
+                    Local expertise with enterprise-grade delivery
+                  </p>
+                </section>
               </div>
+
               <div class="flex justify-center mt-12">
                 <button
                   class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
