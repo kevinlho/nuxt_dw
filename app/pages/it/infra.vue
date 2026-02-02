@@ -9,6 +9,7 @@ import Hero from '~/components/Hero.vue'
     <AppHeader />
     <Hero
       :height-vh="60"
+      image="/image/background/bg_infra.jpg"
       title="IT Infrastructure Solutions"
       subtitle="We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs."
     />
@@ -20,11 +21,11 @@ import Hero from '~/components/Hero.vue'
           <!-- MAIN CONTENT -->
           <main class="flex-1">
             <section class="w-full h-[40vh] flex flex-col items-center justify-center bg-gray-50 px-4 -mt-4">
-              <p class="my-4 text-center text-black max-w-3xl">
+              <p class="text-xs sm:text-lg my-4 text-center text-black max-w-3xl">
                 We design, architect, deploy, and optimise secure, scalable IT infrastructure, backed by proactive
                 managed services to ensure reliability, performance, and business continuity.
               </p>
-              <p class="my-4 pb-4 text-center text-black max-w-3xl">
+              <p class="text-xs sm:text-lg my-4 pb-4 text-center text-black max-w-3xl">
                 From on-premises environments to public cloud platforms, we deliver end-to-end infrastructure solutions
                 with ongoing operational support.
               </p>

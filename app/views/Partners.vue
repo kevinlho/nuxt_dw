@@ -1,11 +1,15 @@
 <script setup lang="ts">
 const items = [
-  'https://picsum.photos/640/640?random=1',
-  'image/icon/ic_logo.png',
-  'https://picsum.photos/640/640?random=3',
-  'image/icon/ic_logo.png',
-  'https://picsum.photos/640/640?random=5',
-  'image/icon/ic_logo.png'
+  '/image/partners/aws.png',
+  '/image/partners/azure.png',
+  '/image/partners/fortinet.png',
+  '/image/partners/hp.png',
+  '/image/partners/hpe.png',
+  '/image/partners/lenovo.png',
+  '/image/partners/microsoft.png',
+  '/image/partners/oneidentity.png',
+  '/image/partners/synology.png',
+  '/image/partners/toff.png'
 ]
 </script>
 
@@ -47,8 +51,8 @@ const items = [
         <div class="flex items-center justify-center h-full text-center">
           <img
             :src="item"
-            width="150"
-            height="150"
+            width="300"
+            height="300"
             class="object-contain"
           >
         </div>

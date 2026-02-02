@@ -38,7 +38,7 @@ const props = defineProps({
     <!-- Overlay -->
     <div
       v-if="overlay"
-      class="absolute inset-0 bg-black/20 z-10"
+      class="absolute inset-0 bg-black/40 z-10"
     />
 
     <!-- Content -->

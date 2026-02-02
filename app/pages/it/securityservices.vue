@@ -2,6 +2,7 @@
 import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
 import Hero from '~/components/Hero.vue'
+import WhatsappButton from '~/components/button/WhatsappButton.vue'
 
 const features = [
   {
@@ -49,6 +50,7 @@ const cardClass = (index: number) => {
     <AppHeader />
     <Hero
       :height-vh="60"
+      image="/image/background/bg_security.jpg"
       title="Cybersecurity"
       subtitle="Defending Your Business's Digital Assets: Our Priority, Your Peace of Mind."
     />
@@ -134,6 +136,9 @@ const cardClass = (index: number) => {
                 </section>
               </div>
             </section>
+            <div class="flex items-center justify-center mb-10">
+              <WhatsappButton />
+            </div>
           </main>
         </div>
       </div>

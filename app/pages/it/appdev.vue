@@ -2,6 +2,7 @@
 import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
 import Hero from '~/components/Hero.vue'
+import WhatsappButton from '~/components/button/WhatsappButton.vue'
 
 const items = [
   {
@@ -32,6 +33,7 @@ const items = [
     <AppHeader />
     <Hero
       :height-vh="60"
+      image="/image/background/bg_appdev.jpg"
       title="Web and Mobile Application Development"
       subtitle="TURN IDEAS INTO POWERFUL DIGITAL EXPERIENCES CUSTOM APPLICATIONS THAT DRIVE REAL-WORLD"
     />
@@ -48,12 +50,7 @@ const items = [
                 business, improve internal efficiency, and keep your customers coming back.
               </p>
 
-              <button
-                class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-                @click="redirectToWhatsappIt"
-              >
-                Talk to us
-              </button>
+              <WhatsappButton />
             </section>
 
             <section class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
@@ -84,7 +81,7 @@ const items = [
 
             <section class="relative flex flex-col items-center pt-10 pb-20 overflow-hidden">
               <!-- Background image -->
-              <div class="absolute inset-0 bg-[url('/image/background/bg_landing.jpg')] bg-cover bg-center" />
+              <div class="absolute inset-0 bg-[url('/image/background/bg_webdev.jpg')] bg-cover bg-center" />
 
               <!-- Dark overlay (background only) -->
               <div class="absolute inset-0 bg-black/40" />

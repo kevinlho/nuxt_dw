@@ -31,7 +31,7 @@
         <div class="relative">
           <div class="relative overflow-hidden rounded-2xl">
             <img
-              src="/image/background/bg_landing.jpg"
+              src="/image/background/bg_aboutus.jpg"
               alt="About Us"
               class="w-full h-130 object-cover"
             >
