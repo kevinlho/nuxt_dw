@@ -58,15 +58,13 @@ onBeforeUnmount(() => {
         to="/"
         class="flex items-center gap-2"
       >
-        <NuxtImg
+        <img
           :src="isSticky ? '/image/icon/ic_logo_dark.webp' : '/image/icon/ic_logo_light.webp'"
           alt="Designerworks Logo"
           width="80"
           height="80"
-          format="webp"
-          quality="90"
           class="w-16 h-16"
-        />
+        >
         <span
           :class="[
             'font-bold text-xl transition-colors',
