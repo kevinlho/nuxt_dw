@@ -231,7 +231,9 @@ onBeforeUnmount(() => {
           class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
           @click="redirectToYouTube"
         >
-          <ion-icon name="logo-youtube" />
+          <ion-icon
+            name="logo-youtube"
+          />
         </button>
       </div>
     </div>

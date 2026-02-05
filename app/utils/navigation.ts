@@ -52,5 +52,12 @@ export const eduservices = [
     icon: '',
     desc: 'A research-intensive public university, Nanyang Technological University, Singapore (NTU Singapore) has about 35,000 undergraduate and postgraduate students in the Business, Computing & Data Science, Engineering, Humanities, Arts, & Social Sciences, Medicine, Science, and Graduate colleges.',
     redirect: '/edu/ntu'
+  },
+  {
+    id: '002',
+    title: 'Designerworks Immersion Program',
+    icon: '',
+    desc: 'Redefine the way you learn. Join our immersive programs and customize your educational journey to match your passion, goals, and future career path.',
+    redirect: '/edu/immersionprogram'
   }
 ]

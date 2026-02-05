@@ -12,7 +12,10 @@ import Partners from '~/views/Partners.vue'
   <NuxtLayout>
     <AppHeader />
     <LandingScreen id="section-landing" />
-    <Partners id="section-partners" />
+    <Partners
+      id="section-partners"
+      type="it"
+    />
     <AboutUs id="section-aboutus" />
     <ITServices id="section-itservices" />
     <EducationServices id="section-educationservices" />

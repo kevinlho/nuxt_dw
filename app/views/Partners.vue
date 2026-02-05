@@ -1,5 +1,17 @@
 <script setup lang="ts">
-const items = [
+import { computed } from 'vue'
+
+type PartnerType = 'it' | 'edu'
+
+const props = defineProps<{
+  type: PartnerType
+}>()
+
+/* =========================
+   Partner Lists
+========================= */
+
+const it_items = [
   '/image/partners/aws.png',
   '/image/partners/azure.png',
   '/image/partners/fortinet.png',
@@ -11,6 +23,58 @@ const items = [
   '/image/partners/synology.png',
   '/image/partners/toff.png'
 ]
+
+const edu_items = [
+  '/image/partners/edu_ntu.webp',
+  '/image/partners/edu_psb.png',
+  '/image/partners/edu_kaplan.png'
+]
+
+/* =========================
+   Switch Items Based on Prop
+========================= */
+
+const items = computed(() => {
+  return props.type === 'edu' ? edu_items : it_items
+})
+
+/* =========================
+   Tailwind Safe Basis Map
+========================= */
+
+const basisMap: Record<number, string> = {
+  1: 'lg:basis-full',
+  2: 'lg:basis-1/2',
+  3: 'lg:basis-1/3',
+  4: 'lg:basis-1/4'
+}
+
+/* =========================
+   Dynamic Carousel UI
+========================= */
+
+const carouselUi = computed(() => {
+  const length = items.value.length
+
+  const lgBasis
+    = length < 5
+      ? basisMap[length] ?? 'lg:basis-1/5'
+      : 'lg:basis-1/5'
+
+  return {
+    item: `basis-1/3 sm:basis-1/4 ${lgBasis}`,
+    prev: 'sm:start-8',
+    next: 'sm:end-8',
+    container: 'ms-0'
+  }
+})
+
+/* =========================
+   Optional UX Improvements
+========================= */
+
+const shouldLoop = computed(() => items.value.length > 1)
+const shouldAutoplay = computed(() => items.value.length > 1)
 </script>
 
 <template>
@@ -24,7 +88,7 @@ const items = [
           opacity: 1,
           y: 0,
           transition: {
-            duration: 2000, // Duration in milliseconds for all properties
+            duration: 2000,
             ease: 'easeOut'
           }
         }"
@@ -33,20 +97,16 @@ const items = [
         OUR PARTNERS
       </p>
 
+      <!-- Carousel -->
       <UCarousel
         v-slot="{ item }"
-        loop
-        :autoplay="{ delay: 2000 }"
+        :loop="shouldLoop"
+        :autoplay="shouldAutoplay ? { delay: 2000 } : false"
         wheel-gestures
         :prev="{ variant: 'solid' }"
         :next="{ variant: 'solid' }"
         :items="items"
-        :ui="{
-          item: 'basis-1/3 sm:basis-1/4 lg:basis-1/5',
-          prev: 'sm:start-8',
-          next: 'sm:end-8',
-          container: 'ms-0'
-        }"
+        :ui="carouselUi"
       >
         <div class="flex items-center justify-center h-full text-center">
           <img
@@ -54,6 +114,7 @@ const items = [
             width="300"
             height="300"
             class="object-contain"
+            loading="lazy"
           >
         </div>
       </UCarousel>
