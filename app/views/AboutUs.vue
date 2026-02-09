@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="bg-white py-16 lg:py-24">
+  <section class="bg-white py-8 lg:py-12">
     <div class="mx-auto max-w-7xl px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- LEFT CONTENT -->

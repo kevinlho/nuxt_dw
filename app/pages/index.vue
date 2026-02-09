@@ -2,6 +2,7 @@
 import AppFooter from '~/components/footer/AppFooter.vue'
 import AppHeader from '~/components/header/AppHeader.vue'
 import AboutUs from '~/views/AboutUs.vue'
+import Team from '~/views/Team.vue'
 import EducationServices from '~/views/EducationServices.vue'
 import ITServices from '~/views/ITServices.vue'
 import LandingScreen from '~/views/LandingScreen.vue'
@@ -17,6 +18,7 @@ import Partners from '~/views/Partners.vue'
       type="it"
     />
     <AboutUs id="section-aboutus" />
+    <Team id="section-team" />
     <ITServices id="section-itservices" />
     <EducationServices id="section-educationservices" />
     <AppFooter />
