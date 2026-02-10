@@ -1,6 +1,6 @@
 <script setup>
 import { navItems, itservices, eduservices } from '~/utils/navigation'
-import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/utils/redirect'
+import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
 </script>
 
 <template>
@@ -34,16 +34,6 @@ import { redirectToInstagram, redirectToTikTok, redirectToYouTube } from '@/util
           >
             <Icon
               name="simple-icons:instagram"
-              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
-            />
-          </button>
-
-          <button
-            class="group"
-            @click="redirectToTikTok"
-          >
-            <Icon
-              name="simple-icons:tiktok"
               class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
             />
           </button>

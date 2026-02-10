@@ -169,7 +169,7 @@ import Hero from '~/components/Hero.vue'
               </div>
             </section>
 
-            <section class="relative flex flex-col items-center pt-10 pb-20 overflow-hidden">
+            <section class="relative flex flex-col items-center pt-10 pb-20 px-4 md:px-0 overflow-hidden">
               <!-- Background image -->
               <div class="absolute inset-0 bg-[url('/image/background/bg_landing.jpg')] bg-cover bg-center" />
 
@@ -177,7 +177,7 @@ import Hero from '~/components/Hero.vue'
               <div class="absolute inset-0 bg-black/40" />
 
               <!-- Content (NOT affected by overlay) -->
-              <h3 class="relative text-4xl py-10 text-white">
+              <h3 class="relative text-4xl py-10 text-white text-center">
                 Managed Infrastructure Services Overview
               </h3>
 
@@ -186,7 +186,7 @@ import Hero from '~/components/Hero.vue'
                 business needs.
               </p>
 
-              <ul class="relative list-disc list-inside space-y-2 text-white">
+              <ul class="relative list-disc list-inside space-y-2 text-white max-w-3xl">
                 <li>24/7 monitoring and alerting</li>
                 <li>Preventive maintenance and patch management</li>
                 <li>Incident and problem management</li>

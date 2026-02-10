@@ -3,7 +3,6 @@ import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { navItems } from '@/utils/navigation'
 import {
   redirectToInstagram,
-  redirectToTikTok,
   redirectToWhatsappIt,
   redirectToYouTube
 } from '~/utils/redirect'
@@ -220,12 +219,6 @@ onBeforeUnmount(() => {
           @click="redirectToInstagram"
         >
           <ion-icon name="logo-instagram" />
-        </button>
-        <button
-          class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
-          @click="redirectToTikTok"
-        >
-          <ion-icon name="logo-tiktok" />
         </button>
         <button
           class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"

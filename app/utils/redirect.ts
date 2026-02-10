@@ -19,7 +19,7 @@ export const redirectToWhatsappEdu = () => {
 }
 
 export const redirectToInstagram = () => {
-  const instagramUrl = 'https://www.instagram.com/'
+  const instagramUrl = 'https://www.instagram.com/designerworks.com.sg/'
   window.open(instagramUrl, '_blank')
 }
 
@@ -29,6 +29,6 @@ export const redirectToTikTok = () => {
 }
 
 export const redirectToYouTube = () => {
-  const youtubeUrl = 'https://www.youtube.com/'
+  const youtubeUrl = 'https://www.youtube.com/@DESIGNERWORKSSG'
   window.open(youtubeUrl, '_blank')
 }

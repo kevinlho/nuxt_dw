@@ -9,21 +9,21 @@ interface TeamMember {
 const members: TeamMember[] = [
   {
     name: 'Paul',
-    role: 'Business Development Director',
-    image: '/image/services/it/paul.jpeg',
-    email: 'sophie@company.com'
+    role: 'Founder & CEO',
+    image: '/image/services/it/paul.jpg',
+    email: 'paul@designerworks.com.sg'
   },
   {
     name: 'Yew Kean',
     role: 'Business Development Director',
     image: '/image/services/it/yew_kean.jpeg',
-    email: 'emmy@company.com'
+    email: 'yk@designerworks.com.sg'
   },
   {
     name: 'Tan Hua Koon',
     role: 'DevOps Lead',
     image: '/image/services/it/tan_hua_koon.jpeg',
-    email: 'orlando@company.com'
+    email: 'huakoon@designerworks.com.sg'
   }
 ]
 </script>
