@@ -148,15 +148,13 @@ onBeforeUnmount(() => {
   >
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <NuxtImg
+        <img
           src="/image/icon/ic_logo_dark.webp"
           alt="Designerworks Logo"
           width="80"
           height="80"
-          format="webp"
-          quality="90"
           class="w-16 h-16"
-        />
+        >
         <span class="font-bold text-xl text-black">
           Designerworks
         </span>
@@ -215,17 +213,21 @@ onBeforeUnmount(() => {
       </p>
       <div class="flex gap-3">
         <button
-          class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+          class="group"
           @click="redirectToInstagram"
         >
-          <ion-icon name="logo-instagram" />
+          <Icon
+            name="simple-icons:instagram"
+            class="w-8 h-8 text-black group-hover:text-gray-300 transition-colors duration-200"
+          />
         </button>
         <button
-          class="bg-[#1B2C47] hover:bg-blue-600 p-3 rounded-md"
+          class="group"
           @click="redirectToYouTube"
         >
-          <ion-icon
-            name="logo-youtube"
+          <Icon
+            name="simple-icons:youtube"
+            class="w-8 h-8 text-black group-hover:text-gray-300 transition-colors duration-200"
           />
         </button>
       </div>
