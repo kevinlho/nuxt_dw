@@ -48,12 +48,8 @@ const cardClass = (index: number) => {
 <template>
   <NuxtLayout>
     <AppHeader />
-    <Hero
-      :height-vh="60"
-      image="/image/background/bg_security.jpg"
-      title="Cybersecurity"
-      subtitle="Defending Your Business's Digital Assets: Our Priority, Your Peace of Mind."
-    />
+    <Hero :height-vh="60" image="/image/background/bg_security.jpg" title="Cybersecurity"
+      subtitle="Defending Your Business's Digital Assets: Our Priority, Your Peace of Mind." />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -120,12 +116,8 @@ const cardClass = (index: number) => {
               </h3>
 
               <div class="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-7xl w-full">
-                <section
-                  v-for="(item, index) in features"
-                  :key="item.title"
-                  :class="cardClass(index)"
-                  class="bg-gray-50"
-                >
+                <section v-for="(item, index) in features" :key="item.title" :class="cardClass(index)"
+                  class="bg-gray-50">
                   <h3 class="text-xl font-semibold text-gray-900 mb-6">
                     {{ item.title }}
                   </h3>
@@ -136,6 +128,43 @@ const cardClass = (index: number) => {
                 </section>
               </div>
             </section>
+            <div class="w-full bg-gray-100 flex items-center justify-center p-8 mb-8">
+              <div class="max-w-4xl w-full">
+                <!-- Header -->
+                <div class="flex items-center gap-6">
+                  <NuxtImg
+                    src="/image/icon/ic_csro.png"
+                    width="256"
+                    height="256"
+                  />
+                  <div class="border-l border-gray-300 pl-6">
+                    <p class="text-base font-bold text-[#1a2744] leading-snug">
+                      License for Penetration Testing Service from Singapore's
+                      Cybersecurity Services Regulation Office (CSRO)
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="border-gray-200 mb-4" />
+
+                <!-- Body -->
+                <p class="text-sm text-gray-700 leading-relaxed">
+                  Designerworks is a licensed provider under the
+                  <strong class="font-semibold text-[#1a2744]">Cybersecurity Service Provider (CSRO)
+                    framework</strong>,
+                  delivering professional penetration testing services to help organisations identify and remediate
+                  security vulnerabilities before they can be exploited. Leveraging industry-recognised methodologies
+                  and certified security specialists, we conduct comprehensive assessments across networks,
+                  applications,
+                  and cloud environments to simulate real-world cyber threats. Our CSRO licence demonstrates our
+                  commitment to regulatory compliance, technical excellence, and responsible handling of sensitive
+                  security information, giving clients confidence that their systems are evaluated by a trusted and
+                  accredited cybersecurity partner.
+                </p>
+
+              </div>
+            </div>
             <div class="flex items-center justify-center mb-10">
               <WhatsappButton />
             </div>
