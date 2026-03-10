@@ -38,10 +38,13 @@ const toggle = () => {
 </script>
 
 <template>
-  <div :id="id" class="rounded-lg mb-4 overflow-hidden">
+  <div
+    :id="id"
+    class="rounded-lg mb-4 overflow-hidden"
+  >
     <button
-      @click="toggle"
       class="w-full px-6 py-4 flex justify-between items-center bg-gray-100 hover:bg-gray-200 transition"
+      @click="toggle"
     >
       <span class="font-semibold text-left text-black text-2xl">{{ title }}</span>
       <span class="text-xl">

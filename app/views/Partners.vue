@@ -70,8 +70,8 @@ const basisMap: Record<number, string> = {
 const carouselUi = computed(() => {
   const length = items.value.length
 
-  const lgBasis =
-    length < 5
+  const lgBasis
+    = length < 5
       ? basisMap[length] ?? 'lg:basis-1/5'
       : 'lg:basis-1/5'
 

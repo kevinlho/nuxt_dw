@@ -3,7 +3,6 @@ import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
 import Hero from '~/components/Hero.vue'
 import WhatsappButton from '~/components/button/WhatsappButton.vue'
-import Partners from '~/views/Partners.vue'
 </script>
 
 <template>

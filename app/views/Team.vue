@@ -64,7 +64,6 @@ const members = computed(() => {
 <template>
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      
       <!-- Title -->
       <p class="text-center text-2xl tracking-widest text-black font-semibold mb-6">
         OUR TEAM
@@ -73,25 +72,25 @@ const members = computed(() => {
       <!-- Buttons -->
       <div class="flex justify-center gap-4 mb-10">
         <button
-          @click="selectedTeam = 'it'"
           :class="[
             'px-6 py-2 text-xs rounded-full font-semibold transition',
             selectedTeam === 'it'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           ]"
+          @click="selectedTeam = 'it'"
         >
           IT TEAM
         </button>
 
         <button
-          @click="selectedTeam = 'edu'"
           :class="[
             'px-6 py-2 text-xs rounded-full font-semibold transition',
             selectedTeam === 'edu'
               ? 'bg-blue-500 text-white shadow-md'
               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           ]"
+          @click="selectedTeam = 'edu'"
         >
           EDU TEAM
         </button>
@@ -112,7 +111,7 @@ const members = computed(() => {
               :src="member.image"
               :alt="member.name"
               class="absolute inset-0 w-full h-full object-cover transition group-hover:scale-105"
-            />
+            >
           </div>
 
           <!-- Floating Label -->
@@ -133,7 +132,6 @@ const members = computed(() => {
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>

@@ -33,24 +33,24 @@ const photo_event = [
 ========================= */
 const studentQuote = [
   {
-    message: "NTU Summer Camp was truly an unforgettable experience! I made so many wonderful friends, participated in so many fun activities, and learned how to work as a team and be independent. The instructors were so friendly and always created a fun atmosphere. Every day at NTU Camp was a new adventure and an opportunity to learn new things through the lessons that the instructors brought to the campers. I can't wait to come back next year!",
-    author: "Simon",
-    country: "Vietnam"
+    message: 'NTU Summer Camp was truly an unforgettable experience! I made so many wonderful friends, participated in so many fun activities, and learned how to work as a team and be independent. The instructors were so friendly and always created a fun atmosphere. Every day at NTU Camp was a new adventure and an opportunity to learn new things through the lessons that the instructors brought to the campers. I can\'t wait to come back next year!',
+    author: 'Simon',
+    country: 'Vietnam'
   },
   {
-    message: "This camp is very fun, I get to work with different kinds of people, meet new people, and gain a unique experience. This NTU camp also helps me in deciding which university I want to go to. Overall a very fulfilling camp.",
-    author: "Davian",
-    country: "Indonesia"
+    message: 'This camp is very fun, I get to work with different kinds of people, meet new people, and gain a unique experience. This NTU camp also helps me in deciding which university I want to go to. Overall a very fulfilling camp.',
+    author: 'Davian',
+    country: 'Indonesia'
   },
   {
-    message: "Personally, I love this camp so much because its giving me very new things like new friends, new environment because i come from Thailand, so I never meet other peope from other countries. It gives me the connections that I never had in my life",
-    author: "Pan",
-    country: "Thailand"
+    message: 'Personally, I love this camp so much because its giving me very new things like new friends, new environment because i come from Thailand, so I never meet other peope from other countries. It gives me the connections that I never had in my life',
+    author: 'Pan',
+    country: 'Thailand'
   },
   {
-    message: "The NTU camp was quite a good and new experience I believe for my self, even for my future self and for others. I feel like i experienced the upcoming difficulties that I think could be in my life. It's a good camp but difficulties are high",
-    author: "Daniel",
-    country: "Russia"
+    message: 'The NTU camp was quite a good and new experience I believe for my self, even for my future self and for others. I feel like i experienced the upcoming difficulties that I think could be in my life. It\'s a good camp but difficulties are high',
+    author: 'Daniel',
+    country: 'Russia'
   }
 ]
 
@@ -59,7 +59,7 @@ const studentQuote = [
 ========================= */
 const videos = [
   { src: '/image/services/ntu/pastevents/video001.mp4', playing: ref(false) },
-  { src: '/image/services/ntu/pastevents/video002.mp4', playing: ref(false) },
+  { src: '/image/services/ntu/pastevents/video002.mp4', playing: ref(false) }
 ]
 
 /* =========================
@@ -94,19 +94,25 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
     <AppHeader />
 
     <section class="relative w-full h-[60vh] min-h-[300px] max-h-[500px] overflow-hidden">
-      <img src="/image/services/ntu/ntu.jpg" class="w-full h-full object-cover" alt="NTU" />
+      <img
+        src="/image/services/ntu/ntu.jpg"
+        class="w-full h-full object-cover"
+        alt="NTU"
+      >
       <div class="absolute inset-0 bg-black/20" />
     </section>
 
     <section class="bg-white">
       <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
         <div class="flex flex-col lg:flex-row gap-12">
-
           <main class="w-full">
             <section class="flex flex-col bg-amber-400">
               <div class="w-full flex-1">
-                <img src="/image/services/ntu/pastevents/bg_banner.jpg" alt="Global Summer Programme 2026"
-                  class="w-full h-auto object-cover" />
+                <img
+                  src="/image/services/ntu/pastevents/bg_banner.jpg"
+                  alt="Global Summer Programme 2026"
+                  class="w-full h-auto object-cover"
+                >
               </div>
               <div class="w-full bg-green text-black text-center py-6 font-semibold tracking-widest italic">
                 DISCOVER, CONNECT, TRANSFORM
@@ -116,8 +122,11 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
             <section class="flex flex-col md:flex-row gap-8 my-10">
               <div class="flex-1 bg-amber-400 p-[10px] md:p-0">
                 <div class="w-full">
-                  <img src="/image/services/ntu/pastevents/pastevents_01.jpg" alt="Global Summer Programme 2026"
-                    class="w-full h-auto object-cover" />
+                  <img
+                    src="/image/services/ntu/pastevents/pastevents_01.jpg"
+                    alt="Global Summer Programme 2026"
+                    class="w-full h-auto object-cover"
+                  >
                 </div>
                 <div class="w-full bg-green text-black text-center py-6 font-semibold tracking-widest italic">
                   EMBRACE CULTURES, LOCAL EXPERIENCES
@@ -126,8 +135,11 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
 
               <div class="flex-1 bg-amber-400 p-[10px] md:p-0">
                 <div class="w-full">
-                  <img src="/image/services/ntu/pastevents/pastevents_02.jpg" alt="Global Summer Programme 2026"
-                    class="w-full h-auto object-cover" />
+                  <img
+                    src="/image/services/ntu/pastevents/pastevents_02.jpg"
+                    alt="Global Summer Programme 2026"
+                    class="w-full h-auto object-cover"
+                  >
                 </div>
                 <div class="w-full bg-green text-black text-center py-6 font-semibold tracking-widest italic">
                   GLOBAL LEARNING, EXPAND HORIZONS
@@ -140,23 +152,44 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
             </h1>
 
             <div class="overview-content space-y-4 text-gray-700 mb-12">
-              <p>Step into the world of innovation at Nanyang Technological University (NTU), one of the world's top
-                young universities.</p>
-              <p>The NTU Global Immersion Competition 2025 is a prestigious international program organized by Nanyang
+              <p>
+                Step into the world of innovation at Nanyang Technological University (NTU), one of the world's top
+                young universities.
+              </p>
+              <p>
+                The NTU Global Immersion Competition 2025 is a prestigious international program organized by Nanyang
                 Technological University (NTU), Singapore, designed to provide young students across Asia with a unique
-                opportunity to experience academic life at one of the world's leading universities.</p>
-              <p>Over the course of eight days, participants will engage in a wide range of academic and experiential
+                opportunity to experience academic life at one of the world's leading universities.
+              </p>
+              <p>
+                Over the course of eight days, participants will engage in a wide range of academic and experiential
                 activities, including interactive lectures, project-based workshops, industry visits, and AI application
-                simulations.</p>
-              <p>Upon successful completion, participants will receive a Certificate of Completion issued by NTU, along
-                with a Letter of Commendation recognizing their academic engagement and contribution to the program.</p>
+                simulations.
+              </p>
+              <p>
+                Upon successful completion, participants will receive a Certificate of Completion issued by NTU, along
+                with a Letter of Commendation recognizing their academic engagement and contribution to the program.
+              </p>
             </div>
 
-            <UCarousel v-slot="{ item }" :loop="shouldLoop" :autoplay="shouldAutoplay ? { delay: 2000 } : false"
-              wheel-gestures :prev="{ variant: 'solid' }" :next="{ variant: 'solid' }" :items="photo_event"
-              :ui="carouselUi">
+            <UCarousel
+              v-slot="{ item }"
+              :loop="shouldLoop"
+              :autoplay="shouldAutoplay ? { delay: 2000 } : false"
+              wheel-gestures
+              :prev="{ variant: 'solid' }"
+              :next="{ variant: 'solid' }"
+              :items="photo_event"
+              :ui="carouselUi"
+            >
               <div class="flex items-center justify-center h-full text-center">
-                <img :src="item" width="960" height="540" class="object-contain" loading="lazy" />
+                <img
+                  :src="item"
+                  width="960"
+                  height="540"
+                  class="object-contain"
+                  loading="lazy"
+                >
               </div>
             </UCarousel>
 
@@ -164,40 +197,68 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
               Hear New Perspectives
             </div>
 
-            <UCarousel v-slot="{ item }" :items="studentQuote" :ui="quoteUi" arrows>
+            <UCarousel
+              v-slot="{ item }"
+              :items="studentQuote"
+              :ui="quoteUi"
+              arrows
+            >
               <div
-                class="rounded-2xl border border-gray-300 p-8 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition-shadow">
+                class="rounded-2xl border border-gray-300 p-8 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition-shadow"
+              >
                 <p class="text-gray-700 leading-relaxed flex-1 mb-5">
                   "{{ truncateString(item.message, 150) }}"
                 </p>
                 <div class="text-right border-t border-gray-100 pt-4">
-                  <p class="text-gray-900 font-bold leading-none">{{ item.author }}</p>
-                  <p class="text-sm text-gray-500 mt-1">{{ item.country }}</p>
+                  <p class="text-gray-900 font-bold leading-none">
+                    {{ item.author }}
+                  </p>
+                  <p class="text-sm text-gray-500 mt-1">
+                    {{ item.country }}
+                  </p>
                 </div>
               </div>
             </UCarousel>
 
             <!-- Videos -->
-            <div v-for="(video, index) in videos" :key="index" class="w-full max-w-3xl mx-auto mt-16">
+            <div
+              v-for="(video, index) in videos"
+              :key="index"
+              class="w-full max-w-3xl mx-auto mt-16"
+            >
               <!-- Thumbnail -->
-              <div v-if="!video.playing.value" class="relative cursor-pointer group"
-                @click="video.playing.value = true">
-                <img src="/image/icon/ic_logo.png" class="w-full rounded-lg shadow-lg" />
+              <div
+                v-if="!video.playing.value"
+                class="relative cursor-pointer group"
+                @click="video.playing.value = true"
+              >
+                <img
+                  src="/image/icon/ic_logo.png"
+                  class="w-full rounded-lg shadow-lg"
+                >
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
-                    class="bg-black/60 group-hover:bg-red-600 transition-colors text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl">
+                    class="bg-black/60 group-hover:bg-red-600 transition-colors text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl"
+                  >
                     ▶
                   </div>
                 </div>
               </div>
 
               <!-- Video -->
-              <video v-else class="w-full aspect-video rounded-lg shadow-lg" controls autoplay>
-                <source :src="video.src" type="video/mp4" />
+              <video
+                v-else
+                class="w-full aspect-video rounded-lg shadow-lg"
+                controls
+                autoplay
+              >
+                <source
+                  :src="video.src"
+                  type="video/mp4"
+                >
                 Your browser does not support the video tag.
               </video>
             </div>
-
           </main>
         </div>
       </div>
