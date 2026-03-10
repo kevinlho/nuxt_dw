@@ -50,19 +50,14 @@ ${form.value.message}
 
 const whatsappDetails = [
   {
-    name: 'Designerworks',
+    name: 'Designerworks IT Consultant',
     title: 'IT Consultant',
     phone: '+6598716988'
   },
   {
-    name: 'Ms. Tiffany',
-    title: 'Business Development Representative Indonesia',
+    name: 'Designerworks Education Services',
+    title: 'Education Services',
     phone: '+6285782787878'
-  },
-  {
-    name: 'Mr. Chin Kai',
-    title: 'Business Development Executive',
-    phone: '+6598716988'
   }
 ]
 </script>

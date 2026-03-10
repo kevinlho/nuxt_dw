@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-type PartnerType = 'it' | 'edu'
+type PartnerType = 'it' | 'edu' | 'all'
 
 const props = defineProps<{
   type: PartnerType
@@ -30,12 +30,26 @@ const edu_items = [
   '/image/partners/edu_kaplan.png'
 ]
 
+const partners = [...it_items, ...edu_items]
+
 /* =========================
    Switch Items Based on Prop
 ========================= */
 
 const items = computed(() => {
-  return props.type === 'edu' ? edu_items : it_items
+  switch (props.type) {
+    case 'edu':
+      return edu_items
+
+    case 'it':
+      return it_items
+
+    case 'all':
+      return partners
+
+    default:
+      return []
+  }
 })
 
 /* =========================
@@ -56,8 +70,8 @@ const basisMap: Record<number, string> = {
 const carouselUi = computed(() => {
   const length = items.value.length
 
-  const lgBasis
-    = length < 5
+  const lgBasis =
+    length < 5
       ? basisMap[length] ?? 'lg:basis-1/5'
       : 'lg:basis-1/5'
 

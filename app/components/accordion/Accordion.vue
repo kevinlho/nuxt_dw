@@ -1,53 +1,11 @@
-<!-- components/accordion/Accordion.vue -->
-<template>
-  <section
-    :id="id"
-    class="mb-6 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 scroll-mt-32"
-  >
-    <button
-      class="w-full bg-gradient-to-r from-gray-50 to-gray-100 px-8 py-5 text-2xl md:text-3xl font-semibold text-gray-900 text-left flex items-center justify-between hover:from-gray-100 hover:to-gray-200 transition-all duration-300"
-      :aria-expanded="isOpen"
-      @click="toggleAccordion"
-    >
-      <span>{{ title }}</span>
-      <svg
-        :class="isOpen ? 'rotate-180 text-blue-600' : 'rotate-0 text-gray-600'"
-        class="w-7 h-7 transition-all duration-300 ease-in-out"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M19 9l-7 7-7-7"
-        />
-      </svg>
-    </button>
-
-    <transition
-      name="accordion"
-      @enter="enter"
-      @after-enter="afterEnter"
-      @leave="leave"
-    >
-      <div
-        v-show="isOpen"
-        class="overflow-hidden"
-      >
-        <div class="p-6 md:p-8 space-y-5 text-gray-700 leading-relaxed text-base">
-          <slot />
-        </div>
-      </div>
-    </transition>
-  </section>
-</template>
-
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed } from 'vue'
 
 const props = defineProps({
+  id: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true
@@ -56,104 +14,60 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  id: {
-    type: String,
-    required: true
+  isOpen: {
+    type: Boolean,
+    default: undefined
   }
 })
 
-const isOpen = ref(props.defaultOpen)
+const emit = defineEmits(['toggle'])
 
-const toggleAccordion = () => {
-  isOpen.value = !isOpen.value
-}
+const internalOpen = ref(props.defaultOpen)
 
-const open = () => {
-  isOpen.value = true
-}
+const isActive = computed(() =>
+  props.isOpen !== undefined ? props.isOpen : internalOpen.value
+)
 
-// Expose methods to parent
-defineExpose({
-  open
-})
-
-// Watch for hash changes in URL
-onMounted(() => {
-  // Check if this accordion should be opened based on URL hash
-  const hash = window.location.hash.slice(1)
-  if (hash === props.id) {
-    isOpen.value = true
+const toggle = () => {
+  if (props.isOpen !== undefined) {
+    emit('toggle')
+  } else {
+    internalOpen.value = !internalOpen.value
   }
-
-  // Listen for custom event to open accordion
-  const handleOpenAccordion = (event: CustomEvent) => {
-    if (event.detail === props.id) {
-      isOpen.value = true
-    }
-  }
-
-  window.addEventListener('open-accordion', handleOpenAccordion as EventListener)
-
-  // Cleanup
-  onUnmounted(() => {
-    window.removeEventListener('open-accordion', handleOpenAccordion as EventListener)
-  })
-})
-
-const enter = (el: Element) => {
-  const element = el as HTMLElement
-  const width = getComputedStyle(element).width
-  element.style.width = width
-  element.style.position = 'absolute'
-  element.style.visibility = 'hidden'
-  element.style.height = 'auto'
-  const height = getComputedStyle(element).height
-  element.style.width = ''
-  element.style.position = ''
-  element.style.visibility = ''
-  element.style.height = '0'
-  // Force reflow
-  void element.offsetHeight
-  requestAnimationFrame(() => {
-    element.style.height = height
-  })
-}
-
-const afterEnter = (el: Element) => {
-  const element = el as HTMLElement
-  element.style.height = 'auto'
-}
-
-const leave = (el: Element) => {
-  const element = el as HTMLElement
-  const height = getComputedStyle(element).height
-  element.style.height = height
-  // Force reflow
-  void element.offsetHeight
-  requestAnimationFrame(() => {
-    element.style.height = '0'
-  })
 }
 </script>
+
+<template>
+  <div :id="id" class="rounded-lg mb-4 overflow-hidden">
+    <button
+      @click="toggle"
+      class="w-full px-6 py-4 flex justify-between items-center bg-gray-100 hover:bg-gray-200 transition"
+    >
+      <span class="font-semibold text-left text-black text-2xl">{{ title }}</span>
+      <span class="text-xl">
+        {{ isActive ? '−' : '+' }}
+      </span>
+    </button>
+
+    <transition name="accordion">
+      <div
+        v-show="isActive"
+        class="px-6 py-6 bg-white text-black"
+      >
+        <slot />
+      </div>
+    </transition>
+  </div>
+</template>
 
 <style scoped>
 .accordion-enter-active,
 .accordion-leave-active {
-  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  overflow: hidden;
+  transition: all 0.25s ease;
 }
-
 .accordion-enter-from,
 .accordion-leave-to {
   opacity: 0;
-}
-
-.accordion-enter-to,
-.accordion-leave-from {
-  opacity: 1;
-}
-
-.scroll-mt-32 {
-  scroll-margin-top: 8rem;
+  transform: translateY(-4px);
 }
 </style>

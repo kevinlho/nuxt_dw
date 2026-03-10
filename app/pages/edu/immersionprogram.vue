@@ -31,11 +31,6 @@ import Partners from '~/views/Partners.vue'
               <WhatsappButton />
             </section>
 
-            <Partners
-              id="section-partners"
-              type="edu"
-            />
-
             <section class="bg-gray-50">
               <section class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
                 <h3 class="text-center text-4xl my-5 text-black">

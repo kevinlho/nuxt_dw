@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue'
+
 interface TeamMember {
   name: string
   role: string
@@ -6,7 +8,13 @@ interface TeamMember {
   email: string
 }
 
-const members: TeamMember[] = [
+type TeamType = 'it' | 'edu'
+
+/* =========================
+   Members Data
+========================= */
+
+const it_members: TeamMember[] = [
   {
     name: 'Paul',
     role: 'Founder & CEO',
@@ -26,17 +34,71 @@ const members: TeamMember[] = [
     email: 'huakoon@designerworks.com.sg'
   }
 ]
+
+const edu_members: TeamMember[] = [
+  {
+    name: 'Tiffany',
+    role: 'Business Development Representative',
+    image: '/image/services/ntu/tiffany.jpg',
+    email: 'NTU.GIC@designerworks.com'
+  }
+]
+
+/* =========================
+   Selected Team State
+========================= */
+
+const selectedTeam = ref<TeamType>('it')
+
+const members = computed(() => {
+  switch (selectedTeam.value) {
+    case 'edu':
+      return edu_members
+    case 'it':
+    default:
+      return it_members
+  }
+})
 </script>
 
 <template>
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-center text-2xl tracking-widest text-black font-semibold mb-10">
+      
+      <!-- Title -->
+      <p class="text-center text-2xl tracking-widest text-black font-semibold mb-6">
         OUR TEAM
       </p>
 
+      <!-- Buttons -->
+      <div class="flex justify-center gap-4 mb-10">
+        <button
+          @click="selectedTeam = 'it'"
+          :class="[
+            'px-6 py-2 text-xs rounded-full font-semibold transition',
+            selectedTeam === 'it'
+              ? 'bg-blue-500 text-white shadow-md'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          ]"
+        >
+          IT TEAM
+        </button>
+
+        <button
+          @click="selectedTeam = 'edu'"
+          :class="[
+            'px-6 py-2 text-xs rounded-full font-semibold transition',
+            selectedTeam === 'edu'
+              ? 'bg-blue-500 text-white shadow-md'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          ]"
+        >
+          EDU TEAM
+        </button>
+      </div>
+
       <!-- GRID -->
-      <div class="grid gap-8 grid-cols-1 lg:grid-cols-3">
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <div
           v-for="member in members"
           :key="member.name"
@@ -50,7 +112,7 @@ const members: TeamMember[] = [
               :src="member.image"
               :alt="member.name"
               class="absolute inset-0 w-full h-full object-cover transition group-hover:scale-105"
-            >
+            />
           </div>
 
           <!-- Floating Label -->
@@ -63,6 +125,7 @@ const members: TeamMember[] = [
               <p class="text-sm text-gray-800">
                 {{ member.role }}
               </p>
+
               <p class="text-xs text-gray-600">
                 {{ member.email }}
               </p>
@@ -70,6 +133,7 @@ const members: TeamMember[] = [
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </template>

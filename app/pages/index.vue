@@ -15,7 +15,7 @@ import Partners from '~/views/Partners.vue'
     <LandingScreen id="section-landing" />
     <Partners
       id="section-partners"
-      type="it"
+      type="all"
     />
     <AboutUs id="section-aboutus" />
     <Team id="section-team" />
