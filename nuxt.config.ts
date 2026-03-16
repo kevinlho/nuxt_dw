@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   },
   // Static site generation
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/nuxt_dw/' : '/',
+    baseURL: '/',
     buildAssetsDir: 'assets'
   },
 

@@ -48,8 +48,12 @@ const cardClass = (index: number) => {
 <template>
   <NuxtLayout>
     <AppHeader />
-    <Hero :height-vh="60" image="/image/background/bg_security.jpg" title="Cybersecurity"
-      subtitle="Defending Your Business's Digital Assets: Our Priority, Your Peace of Mind." />
+    <Hero
+      :height-vh="60"
+      image="/image/background/bg_security.jpg"
+      title="Cybersecurity"
+      subtitle="Defending Your Business's Digital Assets: Our Priority, Your Peace of Mind."
+    />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -116,8 +120,12 @@ const cardClass = (index: number) => {
               </h3>
 
               <div class="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-7xl w-full">
-                <section v-for="(item, index) in features" :key="item.title" :class="cardClass(index)"
-                  class="bg-gray-50">
+                <section
+                  v-for="(item, index) in features"
+                  :key="item.title"
+                  :class="cardClass(index)"
+                  class="bg-gray-50"
+                >
                   <h3 class="text-xl font-semibold text-gray-900 mb-6">
                     {{ item.title }}
                   </h3>
@@ -132,11 +140,12 @@ const cardClass = (index: number) => {
               <div class="max-w-4xl w-full">
                 <!-- Header -->
                 <div class="flex items-center gap-6">
-                  <NuxtImg
+                  <img
                     src="/image/icon/ic_csro.png"
                     width="256"
                     height="256"
-                  />
+                    alt="CSRO License"
+                  >
                   <div class="border-l border-gray-300 pl-6">
                     <p class="text-base font-bold text-[#1a2744] leading-snug">
                       License for Penetration Testing Service from Singapore's
@@ -146,7 +155,7 @@ const cardClass = (index: number) => {
                 </div>
 
                 <!-- Divider -->
-                <hr class="border-gray-200 mb-4" />
+                <hr class="border-gray-200 mb-4">
 
                 <!-- Body -->
                 <p class="text-sm text-gray-700 leading-relaxed">
@@ -162,7 +171,6 @@ const cardClass = (index: number) => {
                   security information, giving clients confidence that their systems are evaluated by a trusted and
                   accredited cybersecurity partner.
                 </p>
-
               </div>
             </div>
             <div class="flex items-center justify-center mb-10">
