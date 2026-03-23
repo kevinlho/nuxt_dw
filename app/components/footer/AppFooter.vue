@@ -9,7 +9,13 @@ import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
       <!-- Logo + Social -->
       <div class="flex-1">
         <div class="flex items-center gap-2 mb-4">
-          <img src="/image/icon/ic_logo.png" alt="Designerworks Logo" width="80" height="80" class="w-16 h-16" />
+          <img
+            src="/image/icon/ic_logo.png"
+            alt="Designerworks Logo"
+            width="80"
+            height="80"
+            class="w-16 h-16"
+          >
           <h2 class="text-2xl font-bold">
             Designerworks
           </h2>
@@ -20,14 +26,24 @@ import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
         </p>
 
         <div class="flex items-center gap-4">
-          <button class="group" @click="redirectToInstagram">
-            <Icon name="simple-icons:instagram"
-              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200" />
+          <button
+            class="group"
+            @click="redirectToInstagram"
+          >
+            <Icon
+              name="simple-icons:instagram"
+              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
+            />
           </button>
 
-          <button class="group" @click="redirectToYouTube">
-            <Icon name="simple-icons:youtube"
-              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200" />
+          <button
+            class="group"
+            @click="redirectToYouTube"
+          >
+            <Icon
+              name="simple-icons:youtube"
+              class="w-8 h-8 text-white group-hover:text-gray-300 transition-colors duration-200"
+            />
           </button>
         </div>
       </div>
@@ -40,8 +56,14 @@ import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
           </h3>
 
           <ul class="space-y-2 text-sm text-gray-300">
-            <li v-for="item in navItems" :key="item.label">
-              <NuxtLink :to="item.to" class="hover:text-blue-500">
+            <li
+              v-for="item in navItems"
+              :key="item.label"
+            >
+              <NuxtLink
+                :to="item.to"
+                class="hover:text-blue-500"
+              >
                 {{ item.label }}
               </NuxtLink>
             </li>
@@ -57,8 +79,14 @@ import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
           </h3>
 
           <ul class="space-y-2 text-sm text-gray-300">
-            <li v-for="item in itservices" :key="item.title">
-              <NuxtLink :to="item.redirect" class="hover:text-blue-500">
+            <li
+              v-for="item in itservices"
+              :key="item.title"
+            >
+              <NuxtLink
+                :to="item.redirect"
+                class="hover:text-blue-500"
+              >
                 {{ item.title }}
               </NuxtLink>
             </li>
@@ -74,8 +102,14 @@ import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
           </h3>
 
           <ul class="space-y-2 text-sm text-gray-300">
-            <li v-for="item in eduservices" :key="item.title">
-              <NuxtLink :to="item.redirect" class="hover:text-blue-500">
+            <li
+              v-for="item in eduservices"
+              :key="item.title"
+            >
+              <NuxtLink
+                :to="item.redirect"
+                class="hover:text-blue-500"
+              >
                 {{ item.title }}
               </NuxtLink>
             </li>
@@ -91,7 +125,10 @@ import { redirectToInstagram, redirectToYouTube } from '@/utils/redirect'
     <div class="max-w-7xl mx-auto flex flex-col items-center gap-6 text-sm text-gray-400">
       <div class="text-center space-y-1">
         <p>
-          © <a href="#" class="text-blue-500 hover:underline">Designerworks</a> 2026.
+          © <a
+            href="#"
+            class="text-blue-500 hover:underline"
+          >Designerworks</a> 2026.
           All Rights Reserved.
         </p>
       </div>
