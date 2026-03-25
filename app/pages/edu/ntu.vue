@@ -44,7 +44,7 @@ const handleNavClick = (sectionId: string, event: Event) => {
     <section class="relative w-full h-[60vh] min-h-[300px] max-h-[500px] overflow-hidden">
       <img
         src="/image/background/bg_ntu_banner.jpg"
-        class="w-full h-full object-contain"
+        class="w-full h-full object-fill"
         alt="NTU"
       >
       <div class="absolute inset-0 bg-black/20" />

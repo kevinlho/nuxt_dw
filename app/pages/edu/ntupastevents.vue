@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import AppHeader from '~/components/header/AppHeader.vue'
 import AppFooter from '~/components/footer/AppFooter.vue'
+import Accordion from '~/components/accordion/Accordion.vue'
 
 /* =========================
    Images for Event Carousel
@@ -94,11 +95,7 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
     <AppHeader />
 
     <section class="relative w-full h-[60vh] min-h-[300px] max-h-[500px] overflow-hidden">
-      <img
-        src="/image/services/ntu/ntu.jpg"
-        class="w-full h-full object-cover"
-        alt="NTU"
-      >
+      <img src="/image/background/bg_ntu_banner.jpg" class="w-full h-full object-fill" alt="NTU">
       <div class="absolute inset-0 bg-black/20" />
     </section>
 
@@ -108,11 +105,8 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
           <main class="w-full">
             <section class="flex flex-col bg-amber-400">
               <div class="w-full flex-1">
-                <img
-                  src="/image/services/ntu/pastevents/bg_banner.jpg"
-                  alt="Global Summer Programme 2026"
-                  class="w-full h-auto object-cover"
-                >
+                <img src="/image/services/ntu/pastevents/bg_banner.jpg" alt="Global Summer Programme 2026"
+                  class="w-full h-auto object-cover">
               </div>
               <div class="w-full bg-green text-black text-center py-6 font-semibold tracking-widest italic">
                 DISCOVER, CONNECT, TRANSFORM
@@ -122,11 +116,8 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
             <section class="flex flex-col md:flex-row gap-8 my-10">
               <div class="flex-1 bg-amber-400 p-[10px] md:p-0">
                 <div class="w-full">
-                  <img
-                    src="/image/services/ntu/pastevents/pastevents_01.jpg"
-                    alt="Global Summer Programme 2026"
-                    class="w-full h-auto object-cover"
-                  >
+                  <img src="/image/services/ntu/pastevents/pastevents_01.jpg" alt="Global Summer Programme 2026"
+                    class="w-full h-auto object-cover">
                 </div>
                 <div class="w-full bg-green text-black text-center py-6 font-semibold tracking-widest italic">
                   EMBRACE CULTURES, LOCAL EXPERIENCES
@@ -135,11 +126,8 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
 
               <div class="flex-1 bg-amber-400 p-[10px] md:p-0">
                 <div class="w-full">
-                  <img
-                    src="/image/services/ntu/pastevents/pastevents_02.jpg"
-                    alt="Global Summer Programme 2026"
-                    class="w-full h-auto object-cover"
-                  >
+                  <img src="/image/services/ntu/pastevents/pastevents_02.jpg" alt="Global Summer Programme 2026"
+                    class="w-full h-auto object-cover">
                 </div>
                 <div class="w-full bg-green text-black text-center py-6 font-semibold tracking-widest italic">
                   GLOBAL LEARNING, EXPAND HORIZONS
@@ -151,45 +139,89 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
               NTU Global Immersion Competition Past Events
             </h1>
 
-            <div class="overview-content space-y-4 text-gray-700 mb-12">
-              <p>
-                Step into the world of innovation at Nanyang Technological University (NTU), one of the world's top
-                young universities.
-              </p>
-              <p>
-                The NTU Global Immersion Competition 2025 is a prestigious international program organized by Nanyang
-                Technological University (NTU), Singapore, designed to provide young students across Asia with a unique
-                opportunity to experience academic life at one of the world's leading universities.
-              </p>
-              <p>
-                Over the course of eight days, participants will engage in a wide range of academic and experiential
-                activities, including interactive lectures, project-based workshops, industry visits, and AI application
-                simulations.
-              </p>
-              <p>
-                Upon successful completion, participants will receive a Certificate of Completion issued by NTU, along
-                with a Letter of Commendation recognizing their academic engagement and contribution to the program.
-              </p>
-            </div>
+            <Accordion id="winter-camp-2025" title="Winter Camp 2025">
+              <h2 class="text-2xl font-bold text-gray-900">Theme : Theories and Applications in Artificial Intelligence
+                Programme</h2>
+              <h3 class="text-xl font-bold text-gray-900">Dates: 14 – 21 December 2025</h3>
 
-            <UCarousel
-              v-slot="{ item }"
-              :loop="shouldLoop"
-              :autoplay="shouldAutoplay ? { delay: 2000 } : false"
-              wheel-gestures
-              :prev="{ variant: 'solid' }"
-              :next="{ variant: 'solid' }"
-              :items="photo_event"
-              :ui="carouselUi"
-            >
+              <div class="space-y-4 text-gray-700 mt-8">
+                <p>This programme provides participants with a comprehensive introduction to the fundamental theories
+                  and real-world applications of Artificial Intelligence (AI). It highlights the growing importance of
+                  AI across industries such as business, healthcare, manufacturing, and transportation.</p>
+                <p>Participants will explore key AI models and modern advancements, gaining both theoretical knowledge
+                  and practical understanding of how AI technologies are applied in various domains.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-0">Key Learning Topics</h3>
+                <ul class="list-disc pl-5">
+                  <li>Introduction to AI and deep neural network architectures</li>
+                  <li>Convolutional Neural Networks (CNNs) and image-based applications</li>
+                  <li>Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) for sequential data</li>
+                  <li>Emerging AI trends such as Transformers, Generative AI, and Diffusion Models</li>
+                  <li>Group presentations by participants</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-0">Programme Objective</h3>
+                <p>To equip learners with a strong foundation in AI theories, models, and applications, preparing them
+                  for future academic or professional advancement in AI-related fields.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-0">Trainer / Professor</h3>
+                <p>The programme is led by Dr. Kim-Hui Yap, a faculty member at Nanyang Technological University.
+                  He specializes in artificial intelligence, computer vision, and multimedia processing, and has
+                  authored over 100 technical publications. He has also held multiple academic leadership roles and
+                  contributed extensively to international research communities and journals
+                </p>
+              </div>
+            </Accordion>
+
+            <Accordion id="summer-camp-2025" title="Summer Camp 2025">
+              <h2 class="text-2xl font-bold text-gray-900">Theme : Robotics, Automation and Internet of Things
+                Programme
+              </h2>
+              <h3 class="text-xl font-bold text-gray-900">Dates: 29 June – 6 July 2025</h3>
+
+              <div class="space-y-4 text-gray-700 mt-8">
+                <p>This programme is designed to provide participants with foundational knowledge in robotics,
+                  industrial automation, and the Internet of Things (IoT). It focuses on how modern
+                  technologies—enabled
+                  by microprocessors and microcontrollers—are transforming industries through smart systems, sensors,
+                  and automation.</p>
+                <p>Participants gain both theoretical understanding and practical exposure, including how to operate
+                  and
+                  potentially design robotic systems, automation processes, and IoT-based solutions applicable in
+                  real-world industrial and societal contexts.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-0">Key Learning Topics</h3>
+                <ul class="list-disc pl-5">
+                  <li>Motion systems and planning in robotics</li>
+                  <li>Industrial automation processes and control systems</li>
+                  <li>Serial communications and network interfaces</li>
+                  <li>IoT sensors and their integration into networks</li>
+                  <li>Student group presentations</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-0">Programme Objective</h3>
+                <p>To equip learners with the skills to become users and designers of robotics, automation systems,
+                  and
+                  IoT technologies for industry applications.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-0">Trainer / Professor</h3>
+                <p>The programme is led by Dr Xie Ming, an Associate Professor at Nanyang Technological University.
+                  He has extensive academic and research experience in robotics, artificial intelligence, and
+                  automation
+                  systems, with numerous publications, patents, and international awards. He is also a co-founder of
+                  several robotics and scientific organizations and has chaired major international conferences in the
+                  field.
+                </p>
+              </div>
+            </Accordion>
+
+            <div class="mb-10" />
+
+            <UCarousel v-slot="{ item }" :loop="shouldLoop" :autoplay="shouldAutoplay ? { delay: 2000 } : false"
+              wheel-gestures :prev="{ variant: 'solid' }" :next="{ variant: 'solid' }" :items="photo_event"
+              :ui="carouselUi">
               <div class="flex items-center justify-center h-full text-center">
-                <img
-                  :src="item"
-                  width="960"
-                  height="540"
-                  class="object-contain"
-                  loading="lazy"
-                >
+                <img :src="item" width="960" height="540" class="object-contain" loading="lazy">
               </div>
             </UCarousel>
 
@@ -197,15 +229,9 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
               Hear New Perspectives
             </div>
 
-            <UCarousel
-              v-slot="{ item }"
-              :items="studentQuote"
-              :ui="quoteUi"
-              arrows
-            >
+            <UCarousel v-slot="{ item }" :items="studentQuote" :ui="quoteUi" arrows>
               <div
-                class="rounded-2xl border border-gray-300 p-8 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition-shadow"
-              >
+                class="rounded-2xl border border-gray-300 p-8 flex flex-col h-full bg-white shadow-sm hover:shadow-md transition-shadow">
                 <p class="text-gray-700 leading-relaxed flex-1 mb-5">
                   "{{ truncateString(item.message, 150) }}"
                 </p>
@@ -221,41 +247,22 @@ const shouldAutoplay = computed(() => photo_event.length > 1)
             </UCarousel>
 
             <!-- Videos -->
-            <div
-              v-for="(video, index) in videos"
-              :key="index"
-              class="w-full max-w-3xl mx-auto mt-16"
-            >
+            <div v-for="(video, index) in videos" :key="index" class="w-full max-w-3xl mx-auto mt-16">
               <!-- Thumbnail -->
-              <div
-                v-if="!video.playing.value"
-                class="relative cursor-pointer group"
-                @click="video.playing.value = true"
-              >
-                <img
-                  src="/image/icon/ic_logo.png"
-                  class="w-full rounded-lg shadow-lg"
-                >
+              <div v-if="!video.playing.value" class="relative cursor-pointer group"
+                @click="video.playing.value = true">
+                <img src="/image/icon/ic_logo.png" class="w-full rounded-lg shadow-lg">
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
-                    class="bg-black/60 group-hover:bg-red-600 transition-colors text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl"
-                  >
+                    class="bg-black/60 group-hover:bg-red-600 transition-colors text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl">
                     ▶
                   </div>
                 </div>
               </div>
 
               <!-- Video -->
-              <video
-                v-else
-                class="w-full aspect-video rounded-lg shadow-lg"
-                controls
-                autoplay
-              >
-                <source
-                  :src="video.src"
-                  type="video/mp4"
-                >
+              <video v-else class="w-full aspect-video rounded-lg shadow-lg" controls autoplay>
+                <source :src="video.src" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
