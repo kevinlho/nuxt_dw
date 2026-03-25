@@ -8,8 +8,12 @@ import WhatsappButton from '~/components/button/WhatsappButton.vue'
 <template>
   <NuxtLayout>
     <AppHeader />
-    <Hero :height-vh="60" image="/image/background/bg_immersionprogram.webp" title="Designerworks Immersion Program"
-      subtitle="Transform your education with us, Experience the unexpected!" />
+    <Hero
+      :height-vh="60"
+      image="/image/background/bg_immersionprogram.webp"
+      title="Designerworks Immersion Program"
+      subtitle="Transform your education with us, Experience the unexpected!"
+    />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -40,60 +44,95 @@ import WhatsappButton from '~/components/button/WhatsappButton.vue'
 
                 <div class="flex flex-wrap justify-center gap-6 w-full">
                   <!-- Card 1 -->
-                  <section class="w-full sm:w-[48%] lg:w-[30%]
+                  <section
+                    class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                    <img src="/image/icon/ic_immersion_travel.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                  >
+                    <img
+                      src="/image/icon/ic_immersion_travel.png"
+                      width="64"
+                      height="64"
+                      class="mb-4"
+                    >
                     <p class="text-gray-700 leading-relaxed">
                       Travel Dates
                     </p>
                   </section>
 
                   <!-- Card 2 -->
-                  <section class="w-full sm:w-[48%] lg:w-[30%]
+                  <section
+                    class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                    <img src="/image/icon/ic_immersion_duration.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                  >
+                    <img
+                      src="/image/icon/ic_immersion_duration.png"
+                      width="64"
+                      height="64"
+                      class="mb-4"
+                    >
                     <p class="text-gray-700 leading-relaxed">
                       Program Duration
                     </p>
                   </section>
 
                   <!-- Card 3 -->
-                  <section class="w-full sm:w-[48%] lg:w-[30%]
+                  <section
+                    class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                    <img src="/image/icon/ic_immersion_destination.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                  >
+                    <img
+                      src="/image/icon/ic_immersion_destination.png"
+                      width="64"
+                      height="64"
+                      class="mb-4"
+                    >
                     <p class="text-gray-700 leading-relaxed">
                       Program Destination
                     </p>
                   </section>
 
                   <!-- Card 4 -->
-                  <section class="w-full sm:w-[48%] lg:w-[30%]
+                  <section
+                    class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                    <img src="/image/icon/ic_immersion_university.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                  >
+                    <img
+                      src="/image/icon/ic_immersion_university.png"
+                      width="64"
+                      height="64"
+                      class="mb-4"
+                    >
                     <p class="text-gray-700 leading-relaxed">
                       University & Company/Industry Visit
                     </p>
                   </section>
 
                   <!-- Card 5 -->
-                  <section class="w-full sm:w-[48%] lg:w-[30%]
+                  <section
+                    class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                    <img src="/image/icon/ic_immersion_diversity.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                  >
+                    <img
+                      src="/image/icon/ic_immersion_diversity.png"
+                      width="64"
+                      height="64"
+                      class="mb-4"
+                    >
                     <p class="text-gray-700 leading-relaxed">
                       Academic & Cultural Visit
                     </p>
@@ -101,8 +140,11 @@ import WhatsappButton from '~/components/button/WhatsappButton.vue'
                 </div>
 
                 <div class="flex justify-center mt-12">
-                  <button class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
-           hover:bg-lime-300 transition" @click="redirectToWhatsappIt">
+                  <button
+                    class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
+           hover:bg-lime-300 transition"
+                    @click="redirectToWhatsappIt"
+                  >
                     CONSULT NOW!
                   </button>
                 </div>

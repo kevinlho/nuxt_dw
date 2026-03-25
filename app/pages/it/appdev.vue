@@ -31,8 +31,12 @@ const items = [
 <template>
   <NuxtLayout>
     <AppHeader />
-    <Hero :height-vh="60" image="/image/background/bg_appdev.jpg" title="Web and Mobile Application Development"
-      subtitle="TURN IDEAS INTO POWERFUL DIGITAL EXPERIENCES CUSTOM APPLICATIONS THAT DRIVE REAL-WORLD" />
+    <Hero
+      :height-vh="60"
+      image="/image/background/bg_appdev.jpg"
+      title="Web and Mobile Application Development"
+      subtitle="TURN IDEAS INTO POWERFUL DIGITAL EXPERIENCES CUSTOM APPLICATIONS THAT DRIVE REAL-WORLD"
+    />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -54,10 +58,15 @@ const items = [
                 We help you
               </h3>
               <div class="space-y-10">
-                <div v-for="(item, index) in items" :key="index" class="flex"
-                  :class="index % 2 === 0 ? 'justify-start' : 'justify-end'">
+                <div
+                  v-for="(item, index) in items"
+                  :key="index"
+                  class="flex"
+                  :class="index % 2 === 0 ? 'justify-start' : 'justify-end'"
+                >
                   <div
-                    class="bg-white rounded-2xl p-8 w-full md:w-4/5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    class="bg-white rounded-2xl p-8 w-full md:w-4/5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                  >
                     <h3 class="text-2xl font-semibold text-blue-600 mb-3">
                       {{ index + 1 }}. {{ item.title }}
                     </h3>
@@ -260,8 +269,10 @@ const items = [
 
                 <p class="text-gray-800">
                   Stay updated with the latest eligibility criteria
-                  <a href="https://www.enterprisesg.gov.sg/financial-support/enterprise-development-grant"
-                    class="text-blue-500 italic hover:underline">
+                  <a
+                    href="https://www.enterprisesg.gov.sg/financial-support/enterprise-development-grant"
+                    class="text-blue-500 italic hover:underline"
+                  >
                     here
                   </a>.
                 </p>
@@ -277,8 +288,11 @@ const items = [
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
                 <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
-                  <img src="/image/appdev/appdev_01.jpg" alt="Project image"
-                    class="object-cover absolute inset-0 w-full h-full" />
+                  <img
+                    src="/image/appdev/appdev_01.jpg"
+                    alt="Project image"
+                    class="object-cover absolute inset-0 w-full h-full"
+                  >
                 </div>
 
                 <!-- CONTENT -->
@@ -302,8 +316,11 @@ const items = [
               <section class="flex flex-col md:flex-row my-12">
                 <!-- IMAGE (first on mobile) -->
                 <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
-                  <img src="/image/appdev/appdev_02.jpg" alt="Project image"
-                    class="object-cover absolute inset-0 w-full h-full" />
+                  <img
+                    src="/image/appdev/appdev_02.jpg"
+                    alt="Project image"
+                    class="object-cover absolute inset-0 w-full h-full"
+                  >
                 </div>
 
                 <!-- CONTENT -->
@@ -327,8 +344,11 @@ const items = [
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
                 <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
-                  <img src="/image/appdev/appdev_03.jpg" alt="Project image"
-                    class="object-cover absolute inset-0 w-full h-full" />
+                  <img
+                    src="/image/appdev/appdev_03.jpg"
+                    alt="Project image"
+                    class="object-cover absolute inset-0 w-full h-full"
+                  >
                 </div>
 
                 <!-- CONTENT -->
@@ -351,8 +371,11 @@ const items = [
               <section class="flex flex-col md:flex-row my-12">
                 <!-- IMAGE (first on mobile) -->
                 <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
-                  <img src="/image/appdev/appdev_04.jpg" alt="Project image"
-                    class="object-cover absolute inset-0 w-full h-full" />
+                  <img
+                    src="/image/appdev/appdev_04.jpg"
+                    alt="Project image"
+                    class="object-cover absolute inset-0 w-full h-full"
+                  >
                 </div>
 
                 <!-- CONTENT -->
@@ -376,8 +399,11 @@ const items = [
               <section class="flex flex-col md:flex-row">
                 <!-- IMAGE (first on mobile) -->
                 <div class="order-1 md:order-2 md:flex-6 bg-amber-50 relative min-h-[300px] md:min-h-[400px]">
-                    <img src="/image/appdev/appdev_05.jpg" alt="Project image"
-                    class="object-cover absolute inset-0 w-full h-full" />
+                  <img
+                    src="/image/appdev/appdev_05.jpg"
+                    alt="Project image"
+                    class="object-cover absolute inset-0 w-full h-full"
+                  >
                 </div>
 
                 <!-- CONTENT -->

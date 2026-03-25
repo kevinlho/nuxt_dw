@@ -7,8 +7,12 @@ import Hero from '~/components/Hero.vue'
 <template>
   <NuxtLayout>
     <AppHeader />
-    <Hero :height-vh="60" image="/image/background/bg_infra.jpg" title="IT Infrastructure Solutions"
-      subtitle="We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs." />
+    <Hero
+      :height-vh="60"
+      image="/image/background/bg_infra.jpg"
+      title="IT Infrastructure Solutions"
+      subtitle="We design, architect, deploy and optimise secured and scalable IT Infrastructure to support your business needs."
+    />
 
     <!-- CONTENT -->
     <section class="bg-white">
@@ -25,8 +29,10 @@ import Hero from '~/components/Hero.vue'
                 From on-premises environments to public cloud platforms, we deliver end-to-end infrastructure solutions
                 with ongoing operational support.
               </p>
-              <button class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
-                @click="redirectToWhatsappIt">
+              <button
+                class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2 hover:bg-lime-300 transition"
+                @click="redirectToWhatsappIt"
+              >
                 Talk to us
               </button>
             </section>
@@ -196,60 +202,95 @@ import Hero from '~/components/Hero.vue'
 
               <div class="flex flex-wrap justify-center gap-6 w-full">
                 <!-- Card 1 -->
-                <section class="w-full sm:w-[48%] lg:w-[30%]
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                  <img src="/image/icon/ic_entity.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                >
+                  <img
+                    src="/image/icon/ic_entity.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  >
                   <p class="text-gray-700 leading-relaxed">
                     Single partner for design, implementation, and operations
                   </p>
                 </section>
 
                 <!-- Card 2 -->
-                <section class="w-full sm:w-[48%] lg:w-[30%]
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                  <img src="/image/icon/ic_list.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                >
+                  <img
+                    src="/image/icon/ic_list.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  >
                   <p class="text-gray-700 leading-relaxed">
                     Vendor-neutral and best-practice driven
                   </p>
                 </section>
 
                 <!-- Card 3 -->
-                <section class="w-full sm:w-[48%] lg:w-[30%]
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                  <img src="/image/icon/ic_secure_lock.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                >
+                  <img
+                    src="/image/icon/ic_secure_lock.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  >
                   <p class="text-gray-700 leading-relaxed">
                     Security-first infrastructure management
                   </p>
                 </section>
 
                 <!-- Card 4 -->
-                <section class="w-full sm:w-[48%] lg:w-[30%]
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                  <img src="/image/icon/ic_cost.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                >
+                  <img
+                    src="/image/icon/ic_cost.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  >
                   <p class="text-gray-700 leading-relaxed">
                     Predictable monthly operating costs
                   </p>
                 </section>
 
                 <!-- Card 5 -->
-                <section class="w-full sm:w-[48%] lg:w-[30%]
+                <section
+                  class="w-full sm:w-[48%] lg:w-[30%]
            rounded-2xl border border-gray-300
            p-6 lg:p-8
            flex flex-col items-center justify-center text-center
-           min-h-[220px]">
-                  <img src="/image/icon/ic_expertise.png" width="64" height="64" class="mb-4" />
+           min-h-[220px]"
+                >
+                  <img
+                    src="/image/icon/ic_expertise.png"
+                    width="64"
+                    height="64"
+                    class="mb-4"
+                  >
                   <p class="text-gray-700 leading-relaxed">
                     Local expertise with enterprise-grade delivery
                   </p>
@@ -257,8 +298,11 @@ import Hero from '~/components/Hero.vue'
               </div>
 
               <div class="flex justify-center mt-12">
-                <button class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
-           hover:bg-lime-300 transition" @click="redirectToWhatsappIt">
+                <button
+                  class="bg-lime-200 text-gray-900 font-semibold rounded px-5 py-2
+           hover:bg-lime-300 transition"
+                  @click="redirectToWhatsappIt"
+                >
                   CONSULT NOW!
                 </button>
               </div>
