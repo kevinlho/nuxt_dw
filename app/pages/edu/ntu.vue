@@ -8,7 +8,7 @@ const apply_link
   = 'https://docs.google.com/forms/d/e/1FAIpQLSftNRfS32ZMR7VnOeyw6t4VGXo1x1Yjj4n9gk4bIiMmh1_w_w/viewform?usp=dialog'
 
 const brochure_link
-  = 'https://drive.google.com/file/d/1qYxQdw4iR0eQBkmLbYr43sSBSa7vif8I/view?usp=drivesdk'
+  = 'https://drive.google.com/file/d/1uirLq_TFO0XOLNK4U6rkFlNIakjdKuDD/view?usp=drivesdk'
 
 const sections = [
   { id: 'overview', label: 'Overview' },
