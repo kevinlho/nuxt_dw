@@ -26,7 +26,11 @@ const photo_event = [
   '/image/services/ntu/pastevents/pastevents_16.jpg',
   '/image/services/ntu/pastevents/pastevents_17.jpg',
   '/image/services/ntu/pastevents/pastevents_18.jpg',
-  '/image/services/ntu/pastevents/pastevents_19.jpg'
+  '/image/services/ntu/pastevents/pastevents_19.jpg',
+  '/image/services/ntu/pastevents/pastevents_20.jpg',
+  '/image/services/ntu/pastevents/pastevents_21.jpg',
+  '/image/services/ntu/pastevents/pastevents_22.jpg',
+  '/image/services/ntu/pastevents/pastevents_23.jpg'
 ]
 
 /* =========================
