@@ -8,7 +8,7 @@ interface TeamMember {
   email: string
 }
 
-type TeamType = 'it' | 'edu'
+type TeamType = 'it' | 'edu' | 'all'
 
 /* =========================
    Members Data
@@ -38,23 +38,29 @@ const it_members: TeamMember[] = [
 const edu_members: TeamMember[] = [
   {
     name: 'Tiffany',
-    role: 'Business Development Representative',
+    role: 'Business Development Head Indonesia',
     image: '/image/services/ntu/tiffany.jpg',
     email: 'NTU.GIC@designerworks.com'
   }
 ]
 
+//toggle button filter
+const buttonFilter = false;
+
 /* =========================
    Selected Team State
 ========================= */
 
-const selectedTeam = ref<TeamType>('it')
+const selectedTeam = ref<TeamType>('all')
 
 const members = computed(() => {
   switch (selectedTeam.value) {
     case 'edu':
       return edu_members
     case 'it':
+      return it_members
+    case 'all':
+      return [...it_members, ...edu_members]
     default:
       return it_members
   }
@@ -66,11 +72,11 @@ const members = computed(() => {
     <div class="max-w-6xl mx-auto px-4">
       <!-- Title -->
       <p class="text-center text-2xl tracking-widest text-black font-semibold mb-6">
-        OUR TEAM
+        Designerworks Leadership Profile
       </p>
 
       <!-- Buttons -->
-      <div class="flex justify-center gap-4 mb-10">
+      <div v-if="buttonFilter" class="flex justify-center gap-4 mb-10">
         <button
           :class="[
             'px-6 py-2 text-xs rounded-full font-semibold transition',
@@ -84,6 +90,7 @@ const members = computed(() => {
         </button>
 
         <button
+          v-if="buttonFilter"
           :class="[
             'px-6 py-2 text-xs rounded-full font-semibold transition',
             selectedTeam === 'edu'
