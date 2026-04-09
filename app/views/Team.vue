@@ -44,8 +44,8 @@ const edu_members: TeamMember[] = [
   }
 ]
 
-//toggle button filter
-const buttonFilter = false;
+// toggle button filter
+const buttonFilter = false
 
 /* =========================
    Selected Team State
@@ -69,7 +69,7 @@ const members = computed(() => {
 // Check if total items is 3n+1 (4, 7, 10, 13, etc.)
 const shouldCenterLastItem = computed(() => {
   const total = members.value.length
-  return total % 3 === 1  // true when items = 4, 7, 10, 13, etc.
+  return total % 3 === 1 // true when items = 4, 7, 10, 13, etc.
 })
 </script>
 
@@ -82,7 +82,10 @@ const shouldCenterLastItem = computed(() => {
       </p>
 
       <!-- Buttons -->
-      <div v-if="buttonFilter" class="flex justify-center gap-4 mb-10">
+      <div
+        v-if="buttonFilter"
+        class="flex justify-center gap-4 mb-10"
+      >
         <button
           :class="[
             'px-6 py-2 text-xs rounded-full font-semibold transition',
