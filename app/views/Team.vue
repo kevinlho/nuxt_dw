@@ -65,6 +65,12 @@ const members = computed(() => {
       return it_members
   }
 })
+
+// Check if total items is 3n+1 (4, 7, 10, 13, etc.)
+const shouldCenterLastItem = computed(() => {
+  const total = members.value.length
+  return total % 3 === 1  // true when items = 4, 7, 10, 13, etc.
+})
 </script>
 
 <template>
@@ -103,12 +109,18 @@ const members = computed(() => {
         </button>
       </div>
 
-      <!-- GRID -->
+      <!-- GRID - Same as original behavior -->
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <div
-          v-for="member in members"
+          v-for="(member, index) in members"
           :key="member.name"
           class="relative group"
+          :class="[
+            // Only center the LAST item when total count is 3n+1
+            shouldCenterLastItem && index === members.length - 1
+              ? 'lg:col-start-2'
+              : ''
+          ]"
         >
           <!-- Square Card -->
           <div
